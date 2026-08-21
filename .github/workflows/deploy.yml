@@ -3,8 +3,13 @@ name: Deploy Hugo Site to DigitalOcean
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-hugo-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -27,11 +32,21 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.DO_SSH_KEY }}
 
-      - name: Sync site to DigitalOcean using rsync
+      - name: Add DigitalOcean host key
         run: |
-          SSH_USER="jetty"
-          DO_DROPLET_IP="161.35.64.131"
-          APP_NAME="web1"
-          REMOTE_PATH="/home/jetty/deployment/site/$APP_NAME/"
+          mkdir -p ~/.ssh
+          ssh-keyscan -H 161.35.64.131 >> ~/.ssh/known_hosts
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/known_hosts
 
-          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./public/ $SSH_USER@$DO_DROPLET_IP:$REMOTE_PATH
+      - name: Sync site to DigitalOcean using rsync
+        env:
+          SSH_USER: jetty
+          DO_DROPLET_IP: 161.35.64.131
+          APP_NAME: web1
+        run: |
+          REMOTE_PATH="/home/$SSH_USER/deployment/site/$APP_NAME/"
+
+          rsync -avz --delete \
+            -e "ssh -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts" \
+            ./public/ "$SSH_USER@$DO_DROPLET_IP:$REMOTE_PATH"
