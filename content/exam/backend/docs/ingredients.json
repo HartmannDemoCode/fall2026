@@ -1,0 +1,35 @@
+[
+  {
+    "id": "4a",
+    "slug": "onion",
+    "name": "Onion",
+    "categoryKey": "vegetable",
+    "calories": 40,
+    "protein": 1.1,
+    "fat": 0.1,
+    "carbs": 9.3,
+    "updatedAt": "2025-10-01T10:15:00.000Z"
+  },
+  {
+    "id": "5a",
+    "slug": "garlic",
+    "name": "Garlic",
+    "categoryKey": "vegetable",
+    "calories": 149,
+    "protein": 6.4,
+    "fat": 0.5,
+    "carbs": 33,
+    "updatedAt": "2025-10-01T10:15:00.000Z"
+  },
+  {
+    "id": "6a",
+    "slug": "olive-oil",
+    "name": "Olive Oil",
+    "categoryKey": "oil",
+    "calories": 884,
+    "protein": 0,
+    "fat": 100,
+    "carbs": 0,
+    "updatedAt": "2025-10-01T10:15:00.000Z"
+  }
+]

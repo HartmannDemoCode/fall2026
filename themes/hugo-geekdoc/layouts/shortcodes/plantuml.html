@@ -1,0 +1,21 @@
+<div class="plantuml" data-theme="light">
+    <noscript>Enable JavaScript to render PlantUML.</noscript>
+</div>
+<script>
+    (function () {
+        const container = document.currentScript.previousElementSibling;
+        const diagram = `{{- .Inner | safeHTML -}}`;
+        const server = `{{ with .Get "server" }}{{ . }}{{ else }}https://kroki.io/plantuml/svg{{ end }}`;
+
+        fetch(server, { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: diagram })
+            .then(r => { if (!r.ok) throw new Error('Render failed'); return r.text(); })
+            .then(svg => { container.innerHTML = svg; })
+            .catch(err => { container.innerHTML = '<pre style="color:#b00">PlantUML render error: ' + err.message + '</pre>'; });
+    })();
+</script>
+<style>
+    .plantuml svg {
+        max-width: 100%;
+        height: auto;
+    }
+</style>

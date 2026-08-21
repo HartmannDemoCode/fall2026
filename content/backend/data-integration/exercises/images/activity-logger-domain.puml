@@ -1,0 +1,53 @@
+@startuml
+
+title ExcerciseLogger Domain Model\n
+
+hide circle
+hide methods
+skinparam nodesep 50
+skinparam ranksep 50
+
+
+
+Class User {
+    name
+    age
+    weight
+    
+}
+
+Class Activity {
+    exerciseDate
+    exerciseType
+    timeOfDay
+    duration
+    distance
+    comment
+}
+
+Class CityInfo {
+    name
+    latitude
+    longitude
+    google_map_url
+    elevation
+    postcodes
+    municipality
+    population
+}
+
+Class WeatherInfo {
+    temperature_2m
+    relative_humidity_2m
+    precipitation
+    wind_speed_10m
+}
+
+User "1" -- "*" Activity : " performs"
+WeatherInfo "1" -right "1" Activity : occurs on
+Activity "*" -right "1" CityInfo: take place in
+
+note top of WeatherInfo: External API
+note top of CityInfo: External API
+
+@enduml

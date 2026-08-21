@@ -1,0 +1,34 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/hugo_stats.json
+
+# Hugo cache
+/.hugo_build.lock
+/.hugo_cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and editor folders/files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node modules (if using npm for asset pipeline)
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Logs
+*.log
+
+# Backup files
+*~
+*.swp
+*.bak
+**/target/
+**/target/

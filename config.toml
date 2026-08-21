@@ -1,0 +1,47 @@
+baseURL = "http://localhost"
+title = "Dat 3. semester"
+theme = "hugo-geekdoc"
+frontmatter = "yaml"
+
+pluralizeListTitles = false
+
+# Geekdoc required configuration
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+
+# Required if you want to render robots.txt template
+enableRobotsTXT = true
+
+# Needed for mermaid shortcodes and attributes in Markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 9
+  [markup.goldmark.renderer]
+    unsafe = true  # Allows raw HTML and nested shortcodes
+
+
+[taxonomies]
+   tag = "tags"
+
+geekdocTagsToMenu = true
+
+[params.geekdoc]
+  disableSearch = false  # Make sure search is active
+
+[params]
+  geekdocSearchShowParent = true
+  geekdocSearchShowDescription = true  # 👈 Enable this
+  geekdocLogo = "img/EK_logo_full.png"
+  geekdocAnchor = true
+  geekdocImageLazyLoading = true
+  geekdocDarkModeDim = false
+
+
+
