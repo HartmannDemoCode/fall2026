@@ -1,5 +1,5 @@
 baseURL = "http://localhost"
-title = "Dat 3. semester"
+title = "EK Dat 3. semester"
 theme = "hugo-geekdoc"
 frontmatter = "yaml"
 
@@ -9,6 +9,10 @@ pluralizeListTitles = false
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
+
+# Language settings
+defaultContentLanguage = "da"
+defaultContentLanguageInSubdir = false
 
 # Required if you want to render robots.txt template
 enableRobotsTXT = true

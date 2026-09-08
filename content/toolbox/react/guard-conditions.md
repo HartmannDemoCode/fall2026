@@ -112,7 +112,7 @@ Here, the `user?.role === "admin"` condition ensures that only users with an "ad
 
 Guard conditions can also be helpful for handling errors in a React component, providing fallbacks or error messages.
 
-```javascript
+```typescript
 function DataDisplay({ data, error }) {
   return (
     <div>

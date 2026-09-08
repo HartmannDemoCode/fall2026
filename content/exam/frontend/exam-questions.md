@@ -44,13 +44,12 @@ Here you can find examples of the types of questions that you can expect to be a
 
 1. Explain what React-Router is and which problems does it solve?
 2. Show and explain the essential building blocks of React-Router.
-1. Describe the purpose of `flexbox` and `grid` in css, and show some examples of what can be achieved by applying them.
 1. Describe conceptually how we deploy a React frontend application to the Caddy server through the CI/CD pipeline.
 1. What is the purpose of Caddy? Explain how we use it in our deployment pipeline (reverse proxy / serving static files / HTTPS certificate handling).
 1. Show and explain conceptually a typical flow of using JWTs for user authentication in a React application.
 1. Show and explain the different parts of a JWT token.
-2. How do we use it in our React application?
+2. How do we use JWTs in our React application?
 1. Describe and show the login process using JWT
-1. Describe conceptually what HTTPS is and how we got it working on our deployed websites.
+1. Describe conceptually what HTTPS is and how we get it working on our deployed websites.
 1. Show and explain an example of sub-routing.
 1. Describe conceptually what Same Origin Policy (SOP) and Cross Origin Ressource Sharing (CORS) are, and how we avoid getting CORS errors when fetching data from your API.

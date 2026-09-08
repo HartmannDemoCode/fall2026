@@ -8,11 +8,11 @@ draft: false
 ![Codelab](../images/reactlogo.png)
 {.half-right}
 
-In React, a **functional component** is a type of component defined as a JavaScript function. It accepts props as an argument and returns JSX, which describes what should be rendered to the DOM. Functional components are simpler, more concise, and have become the standard way to write components in React, especially with the introduction of **React Hooks**, which allow functional components to manage state and lifecycle methods.
+In React, a **functional component** is a type of component defined as a TypeScript function. It accepts props as an argument and returns JSX, which describes what should be rendered to the DOM. Functional components are simpler, more concise, and have become the standard way to write components in React, especially with the introduction of **React Hooks**, which allow functional components to manage state and lifecycle methods.
 
 ## Defining a Functional Component
 
-A functional component is a plain JavaScript function that returns JSX, without the need to extend from `React.Component`. 
+A functional component is a plain TypeScript function that returns JSX, without the need to extend from `React.Component`. 
 
 ### Example
 

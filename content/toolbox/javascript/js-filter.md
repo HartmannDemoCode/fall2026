@@ -1,16 +1,16 @@
 ---
 title: "Filter"
-description: "How the filter function works in JavaScript"
+description: "How the filter function works in TypeScript"
 weight: 5
 draft: false
 ---
-## Filter in JavaScript
+## Filter in TypeScript
 
-The `filter` function in JavaScript is used to create a new array containing only the elements that pass a specific condition or test. It’s perfect for scenarios where you want to keep some items in an array and exclude others based on certain criteria.
+The `filter` function in TypeScript is used to create a new array containing only the elements that pass a specific condition or test. It’s perfect for scenarios where you want to keep some items in an array and exclude others based on certain criteria.
 
 ## Basic Syntax of `filter`
 
-```javascript
+```typescript
 const newArray = array.filter((currentValue, index, array) => {
     // condition to keep currentValue
 });
@@ -32,7 +32,7 @@ When you call `filter` on an array, it loops through each element and applies th
 
 Here’s a simple example where we filter an array of numbers to keep only the even ones:
 
-```javascript
+```typescript
 const numbers = [1, 2, 3, 4, 5, 6];
 const evenNumbers = numbers.filter((num) => num % 2 === 0);
 
@@ -52,7 +52,7 @@ console.log(numbers);      // Output: [1, 2, 3, 4, 5, 6] (original array unchang
 1. **Filtering Numbers**:
    - Use `filter` to keep numbers based on certain criteria, like selecting only even or odd numbers, or numbers within a range.
 
-   ```javascript
+   ```typescript
    const numbers = [1, 2, 3, 4, 5, 6];
    const greaterThanThree = numbers.filter((num) => num > 3);
    // Output: [4, 5, 6]
@@ -61,7 +61,7 @@ console.log(numbers);      // Output: [1, 2, 3, 4, 5, 6] (original array unchang
 2. **Filtering Objects by Property**:
    - `filter` is commonly used to filter arrays of objects by checking properties.
 
-   ```javascript
+   ```typescript
    const users = [
      { name: "Alice", age: 25 },
      { name: "Bob", age: 20 },
@@ -74,7 +74,7 @@ console.log(numbers);      // Output: [1, 2, 3, 4, 5, 6] (original array unchang
 3. **Filtering Strings**:
    - `filter` can be used to remove or select specific strings based on conditions, like length, content, or case.
 
-   ```javascript
+   ```typescript
    const words = ["apple", "banana", "pear", "kiwi"];
    const longWords = words.filter((word) => word.length > 4);
    // Output: ["apple", "banana"]
@@ -83,7 +83,7 @@ console.log(numbers);      // Output: [1, 2, 3, 4, 5, 6] (original array unchang
 4. **Removing Falsy Values**:
    - You can use `filter` to remove all falsy values from an array (e.g., `null`, `undefined`, `0`, `""`, `NaN`, `false`).
 
-   ```javascript
+   ```typescript
    const values = [0, "hello", false, "", 42, null, "world"];
    const truthyValues = values.filter(Boolean);
    // Output: ["hello", 42, "world"]
@@ -92,7 +92,7 @@ console.log(numbers);      // Output: [1, 2, 3, 4, 5, 6] (original array unchang
 5. **Filtering Unique Values**:
    - Using `filter` with `indexOf`, you can filter an array to contain only unique values.
 
-   ```javascript
+   ```typescript
    const numbers = [1, 2, 2, 3, 4, 4, 5];
    const uniqueNumbers = numbers.filter((num, index, arr) => arr.indexOf(num) === index);
    // Output: [1, 2, 3, 4, 5]

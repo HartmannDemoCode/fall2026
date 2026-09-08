@@ -21,7 +21,7 @@ The `useState` hook is called inside a functional component, and it returns an a
 
 Here’s the basic syntax for `useState`:
 
-```javascript
+```typescript
 const [state, setState] = useState(initialValue);
 ```
 
@@ -64,7 +64,7 @@ In this example:
 
 If the initial value of the state depends on some computation, you can pass a function to `useState`. This function will be called only once, at the initial render.
 
-```javascript
+```typescript
 const [value, setValue] = useState(() => computeInitialValue());
 ```
 
@@ -74,7 +74,7 @@ This avoids recalculating the initial value on every render.
 
 When updating state based on the previous state, use the function form of `setState`, which takes the previous state as an argument.
 
-```javascript
+```typescript
 const increment = () => setCount(prevCount => prevCount + 1);
 ```
 
@@ -86,7 +86,7 @@ This ensures that `count` is correctly updated, especially in cases where multip
 
 For example, with an object:
 
-```javascript
+```typescript
 const [user, setUser] = useState({ name: "Alice", age: 25 });
 
 // To update the age

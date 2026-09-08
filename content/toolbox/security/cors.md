@@ -13,7 +13,7 @@ Cross-Origin Resource Sharing (CORS). These are great ressources:
 
 ## Preparing your Javalin API for CORS
 
-The Cross-Origin Resource Sharing (CORS)standard works by adding new HTTP headers that let servers describe which origins are permitted to read that information from a web browser. To make our lives easier on 3rd semester, we allow generiously access to our API's. Keep in mind, that CORS only is of consideration for browser based clients. Any other server can request our apis, any time. So CORS headers are only a means to make life more secure for people using a javascript frontend aplication that utilizes our endpoints made in Javalin.
+The Cross-Origin Resource Sharing (CORS)standard works by adding new HTTP headers that let servers describe which origins are permitted to read that information from a web browser. To make our lives easier on 3rd semester, we allow generiously access to our API's. Keep in mind, that CORS only is of consideration for browser based clients. Any other server can request our apis, any time. So CORS headers are only a means to make life more secure for people using a typescript frontend aplication that utilizes our endpoints made in Javalin.
 
 ## Setting up CORS headers
 

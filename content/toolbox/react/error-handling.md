@@ -16,7 +16,7 @@ and how to handle them.
 
 ## 4 main types of errors
 
-1. **JS runtime errors**: These are errors that occur when the code is running. These are the most common type of errors and are usually caused by a mistake in the code, type errors, etc.
+1. **TypeScript runtime errors**: These are errors that occur when the code is running. These are the most common type of errors and are usually caused by a mistake in the code, type errors, etc.
 
 2. **Network errors**: These are errors that occur when the application is trying to communicate with a server. These errors are usually caused by a problem with the network connection. Often you will handle these errors with a `try...catch` statement.
 

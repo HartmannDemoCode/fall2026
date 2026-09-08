@@ -6,7 +6,7 @@ draft: false
 ---
 ## How to catch events in child elements in the DOM
 
-In JavaScript, event bubbling is a mechanism in the Document Object Model (DOM) where an event triggered on a child element "bubbles up" through its ancestors, all the way up to the root of the DOM (typically the `document` object). This means that if an event is triggered on a child element, any ancestor elements with handlers for the same event type can also receive and handle that event.
+In TypeScript, event bubbling is a mechanism in the Document Object Model (DOM) where an event triggered on a child element "bubbles up" through its ancestors, all the way up to the root of the DOM (typically the `document` object). This means that if an event is triggered on a child element, any ancestor elements with handlers for the same event type can also receive and handle that event.
 
 ## How Event Bubbling Works
 
@@ -26,9 +26,9 @@ Consider this HTML structure:
 </div>
 ```
 
-And JavaScript with event handlers on both elements:
+And TypeScript with event handlers on both elements:
 
-```javascript
+```typescript
 document.getElementById("parent").addEventListener("click", function() {
   console.log("Parent Div clicked");
 });
@@ -47,7 +47,7 @@ When the button (`#child`) is clicked:
 
 To stop the event from bubbling up to parent elements, you can use the `stopPropagation` method on the event object:
 
-```javascript
+```typescript
 document.getElementById("child").addEventListener("click", function(event) {
   console.log("Button clicked");
   event.stopPropagation(); // Stops the event from bubbling up
@@ -72,9 +72,9 @@ In a scenario where an event handler is attached to a parent element, but a chil
 </div>
 ```
 
-And in JavaScript:
+And in TypeScript:
 
-```javascript
+```typescript
 document.getElementById("parent").addEventListener("click", function(event) {
   console.log("Event triggered by:", event.target); // Access the child element that triggered the event
   if (event.target.tagName === "BUTTON") {  // Check if the event came from a button
@@ -95,7 +95,7 @@ If you need to access specific child elements within the `event.target`, you can
 
 For instance, if `event.target` has child elements, you could do something like this:
 
-```javascript
+```typescript
 document.getElementById("parent").addEventListener("click", function(event) {
   console.log("Event triggered by:", event.target);
   if (event.target.tagName === "BUTTON") {
@@ -120,9 +120,9 @@ Event bubbling allows for efficient event handling through delegation, where a s
 </ul>
 ```
 
-JavaScript for handling clicks on list items via a single parent handler:
+TypeScript for handling clicks on list items via a single parent handler:
 
-```javascript
+```typescript
 document.getElementById("list").addEventListener("click", function(event) {
   if (event.target.tagName === "LI") { // Check if an LI was clicked
     console.log("Clicked item ID:", event.target.dataset.id); // Access data attribute on LI

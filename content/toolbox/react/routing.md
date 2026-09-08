@@ -11,11 +11,11 @@ React Router enables "client side routing". React Router is currently released a
 
 ## So what is a router in a SPA
 
-In traditional websites, the browser requests a document from a web server, downloads and evaluates CSS and JavaScript assets, and renders the HTML sent from the server. When the user clicks a link, it starts the process all over again for a new page.
+In traditional websites, the browser requests a document from a web server, downloads and evaluates CSS and TypeScript assets, and renders the HTML sent from the server. When the user clicks a link, it starts the process all over again for a new page.
 
 Client side routing allows your app to update the URL from a link click without making another request for another document from the server. Instead, your app can immediately render some new UI and make data requests with fetch to update the page with new information.
 
-This enables faster user experiences because the browser doesn't need to request an entirely new document or re-evaluate CSS and JavaScript assets for the next page. It also enables more dynamic user experiences with things like animation.
+This enables faster user experiences because the browser doesn't need to request an entirely new document or re-evaluate CSS and TypeScript assets for the next page. It also enables more dynamic user experiences with things like animation.
 
 And having the URL update with each page makes it possible for users to share links to specific pages of your app, or to use the browser's back and forward buttons to navigate between pages.
 [Source: Feature Overview](https://reactrouter.com/start/declarative/routing)
@@ -26,7 +26,7 @@ You can typically place your router in either `main.jsx` or in the `App.jsx`. It
 
 ## `main.jsx`
 
-```jsx
+```typescriptx
 import "./index.css";
 
 import ReactDOM from "react-dom/client";
@@ -83,7 +83,7 @@ See the full example [here](https://github.com/HartmannDemoCode/react_router_dem
 In above example, the App component will be rendered when the URL matches `/` or any of its children. The way to achieve this is by using the `Outlet` component.
 
 App.jsx:
-```jsx
+```typescriptx
 <>
   <div>
     <Header />
@@ -101,7 +101,7 @@ Here we can see how we can use the react router hooks `useParams` and `useNaviga
 
 - `smallComponents.js`:
 
-```jsx
+```typescriptx
 import { Outlet, useNavigate, useParams } from "react-router";
 ...
 const NotFound = () => {
@@ -132,7 +132,7 @@ const ProtectedRoute = ({ children }) => {
 
 The last thing we need to do is to add links to the urls we want to navigate to. We can do this by using the `NavLink` component.
 
-```jsx
+```typescriptx
 import { NavLink, Link } from "react-router";
 
 export default function Header() {

@@ -1,17 +1,17 @@
 ---
 title: "DOM manipulation"
-description: "How to manipulate the DOM using JavaScript"
+description: "How to manipulate the DOM using TypeScript"
 weight: 3
 draft: false
 ---
 
-This is a brief overview of common ways to manipulate the DOM with JavaScript, including adding, modifying, and removing elements or attributes.
+This is a brief overview of common ways to manipulate the DOM with TypeScript, including adding, modifying, and removing elements or attributes.
 
 ## 1. **Selecting Elements**
 
    Before manipulating the DOM, you need to select the elements you want to interact with. You can use methods like `getElementById`, `querySelector`, or `querySelectorAll`.
 
-   ```javascript
+   ```typescript
    // Select element by ID
    const title = document.getElementById("title");
 
@@ -27,7 +27,7 @@ This is a brief overview of common ways to manipulate the DOM with JavaScript, i
 - **Text Content**: Use `textContent` to change the text inside an element.
 - **HTML Content**: Use `innerHTML` to set or get the HTML content of an element.
 
-   ```javascript
+   ```typescript
    // Changing text content
    title.textContent = "New Title";
 
@@ -39,7 +39,7 @@ This is a brief overview of common ways to manipulate the DOM with JavaScript, i
 
    Use `setAttribute`, `getAttribute`, or directly access the attribute to modify them.
 
-   ```javascript
+   ```typescript
    // Set an attribute
    title.setAttribute("class", "new-class");
 
@@ -54,7 +54,7 @@ This is a brief overview of common ways to manipulate the DOM with JavaScript, i
 
 - You can change CSS styles directly by using the `style` property.
 
-   ```javascript
+   ```typescript
    title.style.color = "blue";
    content.style.fontSize = "20px";
    content.style.display = "none"; // Hide the element
@@ -64,7 +64,7 @@ This is a brief overview of common ways to manipulate the DOM with JavaScript, i
 
    Use `classList` to manipulate classes on elements.
 
-   ```javascript
+   ```typescript
    // Add a class
    title.classList.add("highlight");
 
@@ -82,7 +82,7 @@ This is a brief overview of common ways to manipulate the DOM with JavaScript, i
 
    You can create new elements using `document.createElement`, set their content, and then add them to the DOM using `appendChild` or `insertBefore`.
 
-   ```javascript
+   ```typescript
    // Create a new paragraph element
    const newParagraph = document.createElement("p");
    newParagraph.textContent = "This is a new paragraph.";
@@ -99,7 +99,7 @@ This is a brief overview of common ways to manipulate the DOM with JavaScript, i
 
    To remove an element, select it and use `removeChild` on its parent or simply use `remove`.
 
-   ```javascript
+   ```typescript
    // Remove an element by calling remove() on it
    newParagraph.remove();
 
@@ -111,7 +111,7 @@ This is a brief overview of common ways to manipulate the DOM with JavaScript, i
 
    You can add event listeners to elements to make them interactive.
 
-   ```javascript
+   ```typescript
    title.addEventListener("click", () => {
      alert("Title clicked!");
    });

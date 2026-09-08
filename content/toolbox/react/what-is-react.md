@@ -8,13 +8,13 @@ draft: false
 ![Codelab](../images/reactlogo.png)
 {.half-right}
 
-React.js is a JavaScript library developed by Facebook for building user interfaces, especially single-page applications where you want parts of the page to update dynamically without reloading the entire page. Here’s an explanation geared toward someone familiar with Java, HTML, CSS, and some JavaScript:
+React.js is a TypeScript library developed by Facebook for building user interfaces, especially single-page applications where you want parts of the page to update dynamically without reloading the entire page. Here’s an explanation geared toward someone familiar with Java, HTML, CSS, and some TypeScript:
 
 ## What is React?
 
-React is a **JavaScript library for building user interfaces**. Its main purpose is to simplify the process of creating interactive and dynamic web applications, where parts of the page update based on user interaction or changes in data.
+React is a **TypeScript library for building user interfaces**. Its main purpose is to simplify the process of creating interactive and dynamic web applications, where parts of the page update based on user interaction or changes in data.
 
-Think of React as a tool that helps you create complex, responsive, and fast web pages without manually manipulating the HTML with JavaScript every time something needs to change.
+Think of React as a tool that helps you create complex, responsive, and fast web pages without manually manipulating the HTML with TypeScript every time something needs to change.
 
 ## Key Concepts of React
 
@@ -24,9 +24,9 @@ Think of React as a tool that helps you create complex, responsive, and fast web
    - For example, you might have a `Header` component that displays a navigation bar, or a `ProfileCard` component that displays user information.
    - React encourages reusable components, making it easy to build complex interfaces by combining simpler components.
 
-2. **JSX (JavaScript XML)**:
-   - React uses **JSX**, a syntax that looks like HTML but is actually JavaScript. This makes it easy to write the structure of your UI in a more readable and intuitive way.
-   - JSX looks like HTML but lives in JavaScript files. React then compiles this JSX code into JavaScript that the browser can understand.
+2. **JSX (TypeScript XML)**:
+   - React uses **JSX**, a syntax that looks like HTML but is actually TypeScript. This makes it easy to write the structure of your UI in a more readable and intuitive way.
+   - JSX looks like HTML but lives in TypeScript files. React then compiles this JSX code into TypeScript that the browser can understand.
 
    ```react
    function Greeting() {
@@ -34,7 +34,7 @@ Think of React as a tool that helps you create complex, responsive, and fast web
    }
    ```
 
-   Here, `<h1>Hello, world!</h1>` is written in JSX and compiles into JavaScript.
+   Here, `<h1>Hello, world!</h1>` is written in JSX and compiles into TypeScript.
 
 3. **Virtual DOM (Document Object Model)**:
    - React uses a concept called the **Virtual DOM** to efficiently update the UI. In a typical HTML page, updating an element requires changes directly to the DOM, which can be slow.
@@ -55,7 +55,7 @@ Think of React as a tool that helps you create complex, responsive, and fast web
 
 6. **Declarative UI**:
    - React follows a **declarative approach** to building UIs, meaning that you describe what the UI should look like for a given state, and React takes care of updating the DOM as needed.
-   - In traditional JavaScript, you would use imperative code to select elements and change them manually. In React, you simply define how the UI should appear based on the current state, and React updates the DOM for you.
+   - In traditional TypeScript, you would use imperative code to select elements and change them manually. In React, you simply define how the UI should appear based on the current state, and React updates the DOM for you.
 
 ## Why Use React?
 

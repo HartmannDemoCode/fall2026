@@ -1,0 +1,98 @@
+---
+title: TypeScript Rest Parameters
+description: Exercises for Frontend Week I
+weight: 5
+draft: false
+---
+
+# Exercise 4: The Rest Parameter Syntax TypeScript
+
+**Make this exercise in Visual Studio Code and node.js.**
+
+These exercises practice the spread rest syntax, which will be valuable when you start learning React.
+
+[Documentation on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/TypeScript/Reference/Functions/rest_parameters)
+
+Here’s an exercise designed to introduce students to TypeScript’s rest syntax. This exercise involves both function parameters and array destructuring, giving students a chance to see the versatility of the rest syntax.
+
+---
+
+## Objective
+
+To understand and apply TypeScript's rest syntax to handle a variable number of arguments in functions and destructure arrays.
+
+## Instructions
+
+1. **Task 1: Sum of Numbers**
+
+   - Write a function `sumAll` that takes any number of arguments and returns the sum of all arguments.
+   - Use the rest parameter syntax to capture all arguments as an array.
+
+   ```typescript
+   function sumAll(...numbers: number[]): number {
+     // your code here
+     return 0;
+   }
+   
+   console.log(sumAll(1, 2, 3)); // Output: 6
+   console.log(sumAll(10, 20, 30, 40)); // Output: 100
+   ```
+
+2. **Task 2: Concatenate Strings**
+
+   - Create a function `concatStrings` that takes a required first string and then any number of additional strings. The function should concatenate all strings and return the result.
+   - Use the rest syntax to capture the additional strings.
+
+   ```typescript
+   function concatStrings(first: string, ...others: string[]): string {
+     // your code here
+     return '';
+   }
+   
+   console.log(concatStrings("Hello", "World!")); // Output: "Hello World!"
+   console.log(concatStrings("I", "love", "TypeScript")); // Output: "I love TypeScript"
+   ```
+
+3. **Task 3: Destructure with Rest**
+
+   - Given an array, use destructuring with the rest syntax to separate the first two elements from the rest.
+   - Write a function `separateFirstTwo` that accepts an array and returns an object with two properties: `firstTwo` (an array of the first two elements) and `remaining` (an array of the remaining elements).
+
+   ```typescript
+   function separateFirstTwo(array: number[]): { firstTwo: number[]; remaining: number[] } {
+     // your code here
+     return { firstTwo: [], remaining: [] };
+   }
+   
+   console.log(separateFirstTwo([1, 2, 3, 4, 5]));
+   // Output: { firstTwo: [1, 2], remaining: [3, 4, 5] }
+   ```
+
+### Bonus Challenge
+
+4. **Task 4: Group People by Age**
+
+   - Write a function `groupByAge` that accepts a minimum age and then any number of people objects. Each person object has a `name` and `age` property.
+   - The function should return an object with two arrays: `older` for people who are the minimum age or older and `younger` for those younger than the minimum age.
+
+   ```typescript
+   type Person = { name: string; age: number };
+
+   function groupByAge(minAge: number, ...people: Person[]): {
+     older: Person[];
+     younger: Person[];
+   } {
+     // your code here
+     return { older: [], younger: [] };
+   }
+   
+   const people: Person[] = [
+     { name: "Alice", age: 25 },
+     { name: "Bob", age: 20 },
+     { name: "Charlie", age: 35 },
+     { name: "David", age: 18 }
+   ];
+   
+   console.log(groupByAge(21, ...people));
+   // Output: { older: [{name: "Alice", age: 25}, {name: "Charlie", age: 35}], younger: [{name: "Bob", age: 20}, {name: "David", age: 18}] }
+   ```

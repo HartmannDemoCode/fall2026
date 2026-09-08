@@ -1,12 +1,12 @@
 ---
 title: "Promises"
-description: "Using Promises in JavaScript"
+description: "Using Promises in TypeScript"
 weight: 12
 draft: false
 ---
-## Promises in JavaScript
+## Promises in TypeScript
 
-In JavaScript, a **Promise** is an object representing the eventual completion or failure of an asynchronous operation and its resulting value. Promises help manage asynchronous tasks (such as fetching data from an API) by allowing you to handle success or failure after the operation completes. They prevent the need for deeply nested callbacks (known as "callback hell") and offer a more streamlined syntax for asynchronous code.
+In TypeScript, a **Promise** is an object representing the eventual completion or failure of an asynchronous operation and its resulting value. Promises help manage asynchronous tasks (such as fetching data from an API) by allowing you to handle success or failure after the operation completes. They prevent the need for deeply nested callbacks (known as "callback hell") and offer a more streamlined syntax for asynchronous code.
 
 ## How Promises Work
 
@@ -22,7 +22,7 @@ Once a Promise is fulfilled or rejected, it remains in that state and cannot cha
 
 You create a Promise by using the `new Promise` constructor, which accepts a function (executor) with two parameters, `resolve` and `reject`. You use `resolve` to mark the Promise as fulfilled and `reject` to mark it as rejected.
 
-```javascript
+```typescript
 const myPromise = new Promise((resolve, reject) => {
   let success = true;
   
@@ -48,7 +48,7 @@ You handle a Promise’s success or failure by chaining `.then()` and `.catch()`
 
 The `.then()` method is called when the Promise is fulfilled. It takes a function that receives the result as an argument.
 
-```javascript
+```typescript
 myPromise.then(result => {
   console.log(result); // Logs "Operation was successful!" if resolved
 });
@@ -58,7 +58,7 @@ myPromise.then(result => {
 
 The `.catch()` method is called if the Promise is rejected. It takes a function that receives the error message.
 
-```javascript
+```typescript
 myPromise
   .then(result => {
     console.log(result); // Only runs if the Promise is resolved
@@ -72,7 +72,7 @@ myPromise
 
 The `.finally()` method is called after the Promise is settled (either fulfilled or rejected), useful for cleanup actions.
 
-```javascript
+```typescript
 myPromise
   .then(result => {
     console.log(result);
@@ -89,7 +89,7 @@ myPromise
 
 You can chain multiple `.then()` calls to perform sequential asynchronous operations, with each `.then()` receiving the result of the previous one.
 
-```javascript
+```typescript
 myPromise
   .then(result => {
     console.log(result);
@@ -107,7 +107,7 @@ myPromise
 
 `Promise.all()` allows you to execute multiple Promises in parallel. It waits until all Promises in an array are fulfilled, or it fails if any of them are rejected.
 
-```javascript
+```typescript
 const promise1 = Promise.resolve("First");
 const promise2 = Promise.resolve("Second");
 const promise3 = Promise.resolve("Third");

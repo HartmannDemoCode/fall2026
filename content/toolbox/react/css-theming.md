@@ -72,7 +72,7 @@ src/
 
 ### 5. `ThemeToggle.jsx`
 
-```jsx
+```typescriptx
 import styles from './ThemeToggle.module.css';
 
 export default function ThemeToggle({ theme, toggleTheme }) {
@@ -86,7 +86,7 @@ export default function ThemeToggle({ theme, toggleTheme }) {
 
 ### 6. `App.jsx` (with CSS variables)
 
-```jsx
+```typescriptx
 import { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import ThemeToggle from './ThemeToggle';
@@ -147,7 +147,7 @@ body {
 
 ### 2. Import it once in your entry point (usually `main.jsx` or `main.tsx`)
 
-```jsx
+```typescriptx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -168,7 +168,7 @@ This global stylesheet will apply to your whole app and supports scalable themin
 
 What if you need the `theme` in many nested components? Passing props through many layers becomes messy.
 
-```jsx
+```typescriptx
 <App>
   <Header theme={theme} />
     <Navbar theme={theme} />
@@ -183,7 +183,7 @@ This is called **prop drilling**.
 
 ### 1. Create a context file `ThemeContext.jsx`
 
-```jsx
+```typescriptx
 {% raw %}
 import { createContext, useContext, useState, useEffect } from 'react';
 
@@ -214,20 +214,20 @@ export function useTheme() {
 
 **What is `useTheme()`?**
 
-This is a **custom React hook**. A custom hook is just a JavaScript function that:
+This is a **custom React hook**. A custom hook is just a TypeScript function that:
 
 - Starts with the word `use`
 - Calls built-in React hooks (like `useContext`, `useState`, etc.)
 
 In this case, `useTheme()` is a convenience function that wraps `useContext(ThemeContext)` so that any component can simply write:
 
-```js
+```typescript
 const { theme, toggleTheme } = useTheme();
 ```
 
 instead of repeating:
 
-```js
+```typescript
 const { theme, toggleTheme } = useContext(ThemeContext);
 ```
 
@@ -237,7 +237,7 @@ This improves readability and keeps your components clean.
 
 Edit `main.jsx`:
 
-```jsx
+```typescriptx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -255,7 +255,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 ### 3. Use context in `App.jsx`
 
-```jsx
+```typescriptx
 import styles from './App.module.css';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from './ThemeContext';
@@ -276,7 +276,7 @@ export default App;
 
 ### 4. Update `ThemeToggle.jsx`
 
-```jsx
+```typescriptx
 import styles from './ThemeToggle.module.css';
 import { useTheme } from './ThemeContext';
 
@@ -302,7 +302,7 @@ When you create a context with `createContext()`, you're telling React: *"I want
 
 So this:
 
-```jsx
+```typescriptx
 {% raw %}
 <ThemeContext.Provider value={{ theme, toggleTheme }}>
   <App />
@@ -312,7 +312,7 @@ So this:
 
 Makes the `theme` and `toggleTheme` available anywhere inside `<App />` using:
 
-```jsx
+```typescriptx
 const { theme, toggleTheme } = useContext(ThemeContext);
 ```
 

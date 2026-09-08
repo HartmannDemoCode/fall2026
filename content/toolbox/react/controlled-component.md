@@ -135,13 +135,13 @@ Controlled components use React’s state to control input values, providing con
 
 ### Controlled Component
 
-```jsx
+```typescriptx
 <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
 ```
 
 ### Uncontrolled Component
 
-```jsx
+```typescriptx
 <input type="text" ref={nameRef} />
 ```
 

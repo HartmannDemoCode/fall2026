@@ -18,7 +18,7 @@ When you call `useRef`, it returns a **ref object** with a single property: `.cu
 
 Here’s the syntax for `useRef`:
 
-```javascript
+```typescript
 const ref = useRef(initialValue);
 ```
 
