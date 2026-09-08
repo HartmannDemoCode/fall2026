@@ -29,13 +29,20 @@ Consider this HTML structure:
 And TypeScript with event handlers on both elements:
 
 ```typescript
-document.getElementById("parent").addEventListener("click", function() {
-  console.log("Parent Div clicked");
-});
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
-document.getElementById("child").addEventListener("click", function() {
-  console.log("Button clicked");
-});
+if (parent) {
+  parent.addEventListener("click", () => {
+    console.log("Parent Div clicked");
+  });
+}
+
+if (child) {
+  child.addEventListener("click", () => {
+    console.log("Button clicked");
+  });
+}
 ```
 
 When the button (`#child`) is clicked:
@@ -48,10 +55,14 @@ When the button (`#child`) is clicked:
 To stop the event from bubbling up to parent elements, you can use the `stopPropagation` method on the event object:
 
 ```typescript
-document.getElementById("child").addEventListener("click", function(event) {
-  console.log("Button clicked");
-  event.stopPropagation(); // Stops the event from bubbling up
-});
+const child = document.getElementById("child");
+
+if (child) {
+  child.addEventListener("click", (event: MouseEvent) => {
+    console.log("Button clicked");
+    event.stopPropagation(); // Stops the event from bubbling up
+  });
+}
 ```
 
 With `stopPropagation`, only "Button clicked" will be logged, as the event is prevented from reaching the parent element.
@@ -75,12 +86,18 @@ In a scenario where an event handler is attached to a parent element, but a chil
 And in TypeScript:
 
 ```typescript
-document.getElementById("parent").addEventListener("click", function(event) {
-  console.log("Event triggered by:", event.target); // Access the child element that triggered the event
-  if (event.target.tagName === "BUTTON") {  // Check if the event came from a button
-    console.log("Button text is:", event.target.textContent); // Access content of the button
-  }
-});
+const parent = document.getElementById("parent");
+
+if (parent) {
+  parent.addEventListener("click", (event: MouseEvent) => {
+    const target = event.target as HTMLElement | null;
+    console.log("Event triggered by:", target); // Access the child element that triggered the event
+
+    if (target && target.tagName === "BUTTON") {
+      console.log("Button text is:", target.textContent); // Access content of the button
+    }
+  });
+}
 ```
 
 ## Explanation
@@ -96,16 +113,21 @@ If you need to access specific child elements within the `event.target`, you can
 For instance, if `event.target` has child elements, you could do something like this:
 
 ```typescript
-document.getElementById("parent").addEventListener("click", function(event) {
-  console.log("Event triggered by:", event.target);
-  if (event.target.tagName === "BUTTON") {
-    // Access a child within the button, assuming it has a span or other nested element
-    let innerSpan = event.target.querySelector("span");
-    if (innerSpan) {
-      console.log("Span content:", innerSpan.textContent);
+const parent = document.getElementById("parent");
+
+if (parent) {
+  parent.addEventListener("click", (event: MouseEvent) => {
+    const target = event.target as HTMLElement | null;
+    console.log("Event triggered by:", target);
+
+    if (target && target.tagName === "BUTTON") {
+      const innerSpan = target.querySelector("span");
+      if (innerSpan) {
+        console.log("Span content:", innerSpan.textContent);
+      }
     }
-  }
-});
+  });
+}
 ```
 
 ## Example Use Case: Event Delegation with Access to Specific Children
@@ -123,12 +145,18 @@ Event bubbling allows for efficient event handling through delegation, where a s
 TypeScript for handling clicks on list items via a single parent handler:
 
 ```typescript
-document.getElementById("list").addEventListener("click", function(event) {
-  if (event.target.tagName === "LI") { // Check if an LI was clicked
-    console.log("Clicked item ID:", event.target.dataset.id); // Access data attribute on LI
-    console.log("Clicked item content:", event.target.textContent); // Access content of the clicked item
-  }
-});
+const list = document.getElementById("list");
+
+if (list) {
+  list.addEventListener("click", (event: MouseEvent) => {
+    const target = event.target as HTMLElement | null;
+
+    if (target && target.tagName === "LI") {
+      console.log("Clicked item ID:", target.dataset.id); // Access data attribute on LI
+      console.log("Clicked item content:", target.textContent); // Access content of the clicked item
+    }
+  });
+}
 ```
 
 Here, using `event.target.dataset.id`, we can access the `data-id` attribute directly from the list item that triggered the event, without needing to add a separate listener for each item.

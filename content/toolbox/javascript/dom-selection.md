@@ -13,12 +13,16 @@ When working with the DOM in a browser, there are plenty of ways to select eleme
 - **Example**:
 
      ```typescript
-     const element = document.querySelector("#myId"); // Select by ID
-     const elementByClass = document.querySelector(".myClass"); // Select by class
-     const elementByAttribute = document.querySelector("[data-attribute='value']"); // Select by attribute
+     const element = document.querySelector<HTMLElement>("#myId"); // Select by ID
+     const elementByClass = document.querySelector<HTMLElement>(".myClass"); // Select by class
+     const elementByAttribute = document.querySelector<HTMLElement>("[data-attribute='value']"); // Select by attribute
+
+     if (element) {
+       element.textContent = "Selected by ID";
+     }
      ```
 
-- **Benefit**: More flexible than `getElementById` because it works with any CSS selector, not just IDs.
+- **Benefit**: More flexible than `getElementById` because it works with any CSS selector, not just IDs. Since `querySelector` may return `null`, TypeScript requires a guard before using the element.
 
 ## 2. **`document.querySelectorAll(..)`**
 
@@ -26,9 +30,10 @@ When working with the DOM in a browser, there are plenty of ways to select eleme
 - **Example**:
 
      ```typescript
-     const elements = document.querySelectorAll(".myClass"); // Selects all elements with class `myClass`
-     elements.forEach(element => {
-       // Do something with each element
+     const elements = document.querySelectorAll<HTMLElement>(".myClass"); // Selects all elements with class `myClass`
+
+     elements.forEach((element) => {
+       element.classList.add("highlight");
      });
      ```
 
