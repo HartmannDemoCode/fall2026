@@ -1,6 +1,6 @@
 ---
-title: "EK Dat 3. semester"
-description: "Velkommen til Dat 3. semester på EK."
+title: "EK Web 1st semester 2026"
+description: "Welcome to the 1st semester frontend course"
 draft: false
 geekdocflatSection: true
 ---

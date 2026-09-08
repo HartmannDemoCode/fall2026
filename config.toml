@@ -1,5 +1,5 @@
 baseURL = "http://localhost"
-title = "EK Dat 3. semester"
+title = "EK Web 1st Semester"
 theme = "hugo-geekdoc"
 frontmatter = "yaml"
 
