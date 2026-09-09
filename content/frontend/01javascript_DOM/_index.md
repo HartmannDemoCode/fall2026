@@ -45,6 +45,8 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 1. [Install Node.js (LTS version)](https://nodejs.org/en/)
 2. [Install Visual Studio Code](https://code.visualstudio.com/)
 3. [Install Live Server extension in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+4. [Add codex to VS Code](https://www.youtube.com/watch?v=WX_5fas2Rz4) You will need a paid account for this.
+
 **Main Exercises**
 
 1. [Exercise 1: Getting comfortable with arrays, filter, map, and forEach](exercises/js-basics)
