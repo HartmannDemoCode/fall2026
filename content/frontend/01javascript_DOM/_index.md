@@ -14,7 +14,8 @@ Topics covered in this week are:
 1. JavaScript in a browser
 2. DOM intro
 
-![Logos](images/logos.jpeg)
+
+![DOM](images/dom.png)
 
 We are going to learn JavaScript basics and DOM manipulation this week.
 
@@ -49,6 +50,7 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 
 **Main Exercises**
 
+0. [Exercise 0: Getting started with JavaScript and the DOM](exercises/js-dom-intro)
 1. [Exercise 1: Getting comfortable with arrays, filter, map, and forEach](exercises/js-basics)
 2. [Exercise 2: JavaScript, DOM Manipulation and Events](exercises/js-dom-basics)
 

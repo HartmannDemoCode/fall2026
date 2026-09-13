@@ -2,7 +2,7 @@
 title: 01 JS and React I
 description: "JavaScript and React basics"
 weight: 1
-draft: false
+draft: true
 geekdocCollapseSection: true
 ---
 ## Javascript and React Intro
