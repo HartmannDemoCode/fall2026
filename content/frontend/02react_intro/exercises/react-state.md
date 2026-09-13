@@ -35,7 +35,7 @@ All modern browsers include a `Local Storage` and `Session Storage` area to stor
 
 ![LocalStorage](../images/localstorage.png)
 
-The TypeScript API, used to read/write is extremely simple, you can do it like this:
+The JavaScript API, used to read/write is extremely simple, you can do it like this:
 
 ```javscript
 localStorage.setItem("count", count);

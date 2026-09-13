@@ -1,5 +1,5 @@
 ---
-title: TypeScript Codelab
+title: JavaScript Codelab
 description: Exercises for Frontend Week I Codelab
 weigt: 6
 draft: false
@@ -9,7 +9,7 @@ draft: false
 
 # Codelab
 
-This CodeLab day designed to help you getting to know TypeScript and the DOM.
+This CodeLab day designed to help you getting to know JavaScript and the DOM.
 
 ## 1. The assignments
 

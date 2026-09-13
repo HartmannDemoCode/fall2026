@@ -1,6 +1,6 @@
 ---
-title: "TypeScript"
-description: "TypeScript documentation"
+title: "JavaScript"
+description: "JS documentation"
 weight: 9
 draft: false
 geekdocCollapseSection: true

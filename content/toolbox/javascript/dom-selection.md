@@ -1,6 +1,6 @@
 ---
 title: "DOM selection"
-description: "How to select elements in the DOM using TypeScript."
+description: "How to select elements in the DOM using JavaScript."
 weight: 1
 draft: false
 ---
@@ -12,28 +12,23 @@ When working with the DOM in a browser, there are plenty of ways to select eleme
 - **Description**: Selects the first element that matches a specified CSS selector.
 - **Example**:
 
-     ```typescript
-     const element = document.querySelector<HTMLElement>("#myId"); // Select by ID
-     const elementByClass = document.querySelector<HTMLElement>(".myClass"); // Select by class
-     const elementByAttribute = document.querySelector<HTMLElement>("[data-attribute='value']"); // Select by attribute
-
-     if (element) {
-       element.textContent = "Selected by ID";
-     }
+     ```javascript
+     const element = document.querySelector("#myId"); // Select by ID
+     const elementByClass = document.querySelector(".myClass"); // Select by class
+     const elementByAttribute = document.querySelector("[data-attribute='value']"); // Select by attribute
      ```
 
-- **Benefit**: More flexible than `getElementById` because it works with any CSS selector, not just IDs. Since `querySelector` may return `null`, TypeScript requires a guard before using the element.
+- **Benefit**: More flexible than `getElementById` because it works with any CSS selector, not just IDs.
 
 ## 2. **`document.querySelectorAll(..)`**
 
 - **Description**: Selects all elements that match a specified CSS selector and returns a `NodeList` (similar to an array but not quite).
 - **Example**:
 
-     ```typescript
-     const elements = document.querySelectorAll<HTMLElement>(".myClass"); // Selects all elements with class `myClass`
-
-     elements.forEach((element) => {
-       element.classList.add("highlight");
+     ```javascript
+     const elements = document.querySelectorAll(".myClass"); // Selects all elements with class `myClass`
+     elements.forEach(element => {
+       // Do something with each element
      });
      ```
 
@@ -44,7 +39,7 @@ When working with the DOM in a browser, there are plenty of ways to select eleme
 - **Description**: Selects all elements with a given class name and returns an `HTMLCollection` (a live collection, meaning it updates if the DOM changes).
 - **Example**:
 
-     ```typescript
+     ```javascript
      const elements = document.getElementsByClassName("myClass");
      ```
 
@@ -55,7 +50,7 @@ When working with the DOM in a browser, there are plenty of ways to select eleme
 - **Description**: Selects all elements with a specified tag name, such as `div`, `p`, or `input`.
 - **Example**:
 
-     ```typescript
+     ```javascript
      const divs = document.getElementsByTagName("div");
      ```
 

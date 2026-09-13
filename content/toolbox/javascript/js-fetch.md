@@ -1,12 +1,12 @@
 ---
 title: "Fetch"
-description: "How to fetch endpoints in TypeScript"
+description: "How to fetch endpoints in JavaScript"
 weight: 13
 draft: false
 ---
 ## Fetching data from APIs
 
-The `fetch` API in TypeScript is a modern way to make HTTP requests, providing a flexible and more powerful alternative to `XMLHttpRequest`. It returns a `Promise` that resolves to the `Response` object, representing the result of the request.
+The `fetch` API in JavaScript is a modern way to make HTTP requests, providing a flexible and more powerful alternative to `XMLHttpRequest`. It returns a `Promise` that resolves to the `Response` object, representing the result of the request.
 
 Here’s a basic overview of how `fetch` works and how to add headers:
 
@@ -19,7 +19,7 @@ The `fetch` function accepts two main arguments:
 
 ## Basic Example
 
-```typescript
+```javascript
 fetch('https://api.example.com/data')
   .then(response => response.json()) // parse the JSON from the response
   .then(data => console.log(data))   // work with the data
@@ -40,7 +40,7 @@ Headers are metadata you send along with the request to provide information like
 
  Example with Headers
 
-```typescript
+```javascript
 fetch('https://api.example.com/data', {
   method: 'GET', // or POST, PUT, DELETE, etc.
   headers: {
@@ -68,7 +68,7 @@ fetch('https://api.example.com/data', {
 
 When sending data, such as in a POST request, you typically include the `body` option with a stringified JSON object and set the `Content-Type` to `application/json`:
 
-```typescript
+```javascript
 fetch('https://api.example.com/submit', {
   method: 'POST',
   headers: {
@@ -95,7 +95,7 @@ The `response.ok` property is a shorthand boolean that’s `true` for successful
 
 Here’s how to do it:
 
-```typescript
+```javascript
 fetch('https://api.example.com/data')
   .then(response => {
     // Check if the response is OK (status is 200-299)
@@ -129,7 +129,7 @@ fetch('https://api.example.com/data')
 
 ### Example Handling Specific Status Codes
 
-```typescript
+```javascript
 fetch('https://api.example.com/data')
   .then(response => {
     if (!response.ok) {

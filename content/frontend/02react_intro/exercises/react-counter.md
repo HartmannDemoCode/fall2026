@@ -33,9 +33,9 @@ The first prototype might look as simple as this:
 
 - You should be able to stop and start the timer, so a boolean useState for that would also be recommended.
 
-- The timer can be activated and set into motion by using the TypeScript `setInterval` function, setting the timer to 1000ms. This should be handled in a `useEffect` hook.
+- The timer can be activated and set into motion by using the JavaScript `setInterval` function, setting the timer to 1000ms. This should be handled in a `useEffect` hook.
 
-- Create TypeScript function to start the timer (`startTimer()`) and to reset the timer (`resetTimer`).
+- Create JavaScript function to start the timer (`startTimer()`) and to reset the timer (`resetTimer`).
 
 - The UI (basic format) could be implemented as this:
 

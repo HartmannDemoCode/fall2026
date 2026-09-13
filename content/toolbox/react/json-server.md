@@ -20,7 +20,7 @@ draft: false
 
 3. Ad a script to package.json (like line 5 below:) (todos.json is the file created in step 1 above)
 
-   ```typescripton
+   ```json
     "scripts": {
        "start": "node scripts/start.js",
        "build": "node scripts/build.js",
@@ -29,11 +29,11 @@ draft: false
      },
    ```
 
-4. create dummy data by making a typescript program and run it with node.
+4. create dummy data by making a javascript program and run it with node.
 
 5. Create a file in the working folder: mockdata.js:
 
-```typescript
+```javascript
 import casual from 'casual';
 
 // Create an object for config file

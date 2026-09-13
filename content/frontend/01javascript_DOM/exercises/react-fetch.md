@@ -12,7 +12,7 @@ These exercises introduces two important aspects of React.
 1. useState (how to store data on the client in variables)
 2. useEffect (how to evoke functions on life cycle events)
 
-And then we will work with more TypeScript functionality:
+And then we will work with more JavaScript functionality:
 
 1. fetch (fetching data from api's)
 2. click events

@@ -51,7 +51,7 @@ In Vite, you can use `.env` files to define environment-specific variables:
 
 In your code, use `import.meta.env` to access the environment variables. For example:
 
-```typescript
+```javascript
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 async function fetchData() {

@@ -1,5 +1,5 @@
 ---
-title: TypeScript Calculator
+title: JavaScript Calculator
 description: Exercises for Frontend Week I
 weight: 7
 draft: false

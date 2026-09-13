@@ -27,7 +27,7 @@ This CodeLab exercise is designed to help you practice creating React applicatio
     npm create vite@latest
     ```
 
-2. Choose your project name and framework (`React`) and variant (`TypeScript`).
+2. Choose your project name and framework (`React`) and variant (`JavaScript`).
 3. Navigate to your new project folder and install dependencies:
 
     ```bash
@@ -44,7 +44,7 @@ This CodeLab exercise is designed to help you practice creating React applicatio
 2. Structure your `fetch` call to retrieve the list of trips when your React app loads. Use `useEffect` and `useState` hooks for managing state and lifecycle.
 3. Verify the response data structure:
 
-    ```typescripton
+    ```javascript
     [
       {
         "id": 11,

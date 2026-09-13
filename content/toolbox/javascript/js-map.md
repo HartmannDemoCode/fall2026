@@ -1,16 +1,16 @@
 ---
 title: "Map"
-description: "How the reduce function works in TypeScript"
+description: "How the reduce function works in JavaScript"
 weight: 4
 draft: false
 ---
-## Map in TypeScript
+## Map in JavaScript
 
-The `map` function in TypeScript is a very commonly used method that creates a new array by transforming each element in an existing array. It’s ideal when you want to apply a function to every item in an array and get a new array with the transformed items, without changing the original array.
+The `map` function in JavaScript is a very commonly used method that creates a new array by transforming each element in an existing array. It’s ideal when you want to apply a function to every item in an array and get a new array with the transformed items, without changing the original array.
 
 ## Basic Syntax of `map`
 
-```typescript
+```javascript
 const newArray = array.map((currentValue, index, array) => {
     // logic to transform currentValue
 });
@@ -30,7 +30,7 @@ When you call `map` on an array, it loops through each element, applies a functi
 
 Here’s a simple example where we double each number in an array using `map`:
 
-```typescript
+```javascript
 const numbers = [1, 2, 3, 4];
 const doubled = numbers.map((num) => num * 2);
 
@@ -51,7 +51,7 @@ console.log(numbers); // Output: [1, 2, 3, 4] (original array unchanged)
 
    - `map` is often used to apply a transformation to each element in an array, such as converting strings to uppercase.
 
-   ```typescript
+   ```javascript
    const words = ["hello", "world"];
    const uppercaseWords = words.map((word) => word.toUpperCase());
    // Output: ["HELLO", "WORLD"]
@@ -61,7 +61,7 @@ console.log(numbers); // Output: [1, 2, 3, 4] (original array unchanged)
 
    - If you have an array of objects, you can use `map` to extract a specific property from each object.
 
-   ```typescript
+   ```javascript
    const users = [
      { name: "Alice", age: 25 },
      { name: "Bob", age: 30 },
@@ -75,7 +75,7 @@ console.log(numbers); // Output: [1, 2, 3, 4] (original array unchanged)
 
    - `map` is helpful for formatting or transforming numeric data, such as converting an array of numbers into an array of strings with specific units.
 
-   ```typescript
+   ```javascript
    const prices = [5, 10, 15];
    const formattedPrices = prices.map((price) => `$${price}`);
    // Output: ["$5", "$10", "$15"]
@@ -85,7 +85,7 @@ console.log(numbers); // Output: [1, 2, 3, 4] (original array unchanged)
 
    - In frameworks like React, `map` is often used to render lists of components based on an array of data.
 
-   ```typescript
+   ```javascript
    const items = ["Item 1", "Item 2", "Item 3"];
    const itemList = items.map((item) => `<li>${item}</li>`);
    // Output: ["<li>Item 1</li>", "<li>Item 2</li>", "<li>Item 3</li>"]
@@ -95,7 +95,7 @@ console.log(numbers); // Output: [1, 2, 3, 4] (original array unchanged)
 
    - `map` can apply more complex transformations that involve modifying each element’s structure.
 
-   ```typescript
+   ```javascript
    const numbers = [1, 2, 3];
    const objects = numbers.map((num) => ({ value: num, doubled: num * 2 }));
    // Output: [{ value: 1, doubled: 2 }, { value: 2, doubled: 4 }, { value: 3, doubled: 6 }]

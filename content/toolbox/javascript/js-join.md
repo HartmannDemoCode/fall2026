@@ -1,16 +1,16 @@
 ---
 title: "Join"
-description: "How the reduce function works in TypeScript"
+description: "How the reduce function works in JavaScript"
 weight: 7
 draft: false
 ---
-## Join in TypeScript
+## Join in JavaScript
 
-The `join` function in TypeScript is a simple yet powerful method for combining elements of an array into a single string, with a specified separator between each element. It’s often used to format or display array data in a readable format.
+The `join` function in JavaScript is a simple yet powerful method for combining elements of an array into a single string, with a specified separator between each element. It’s often used to format or display array data in a readable format.
 
 ## Basic Syntax of `join`
 
-```typescript
+```javascript
 const joinedString = array.join(separator);
 ```
 
@@ -26,7 +26,7 @@ When you call `join` on an array, it takes each element in the array, converts i
 
 Here’s a basic example where we join an array of words with a space as a separator:
 
-```typescript
+```javascript
 const words = ["Hello", "world", "how", "are", "you"];
 const sentence = words.join(" ");
 
@@ -45,17 +45,17 @@ console.log(sentence); // Output: "Hello world how are you"
 
    - Use `join` to combine words into a single sentence or phrase.
 
-   ```typescript
-   const words = ["TypeScript", "is", "awesome"];
+   ```javascript
+   const words = ["JavaScript", "is", "awesome"];
    const sentence = words.join(" ");
-   // Output: "TypeScript is awesome"
+   // Output: "JavaScript is awesome"
    ```
 
 2. **Formatting Numbers**:
 
    - `join` is useful for formatting numbers, such as joining them with hyphens, dots, or slashes for phone numbers, dates, etc.
 
-   ```typescript
+   ```javascript
    const phoneNumber = [123, 456, 7890];
    const formattedPhone = phoneNumber.join("-");
    // Output: "123-456-7890"
@@ -65,7 +65,7 @@ console.log(sentence); // Output: "Hello world how are you"
 
    - `join` can be used to create CSV (comma-separated values) or TSV (tab-separated values) strings from arrays.
 
-   ```typescript
+   ```javascript
    const data = ["Alice", "25", "Engineer"];
    const csvLine = data.join(",");
    // Output: "Alice,25,Engineer"
@@ -75,7 +75,7 @@ console.log(sentence); // Output: "Hello world how are you"
 
    - When generating HTML or code snippets, `join` is handy for adding specific separators between elements.
 
-   ```typescript
+   ```javascript
    const listItems = ["<li>Item 1</li>", "<li>Item 2</li>", "<li>Item 3</li>"];
    const list = "<ul>" + listItems.join("") + "</ul>";
    // Output: "<ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>"
@@ -85,7 +85,7 @@ console.log(sentence); // Output: "Hello world how are you"
 
    - If you’re working with paths, `join` is useful for combining directory or URL segments.
 
-   ```typescript
+   ```javascript
    const pathSegments = ["home", "user", "documents", "file.txt"];
    const filePath = pathSegments.join("/");
    // Output: "home/user/documents/file.txt"

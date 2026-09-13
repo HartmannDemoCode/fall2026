@@ -13,7 +13,7 @@ This is a guided tutorial in which we will:
 
 2. Show a list of persons
 
-3. Implement simple `CRUD` operations on the persons. This includes `GET`, `POST`, `PUT`, and `DELETE` http requests by using TypeScripts' `fetch` method.
+3. Implement simple `CRUD` operations on the persons. This includes `GET`, `POST`, `PUT`, and `DELETE` http requests by using JavaScript' `fetch` method.
 
 4. Do a little styling with css
 
@@ -42,7 +42,7 @@ These are the steps:
 
 - Configuring the JSON server. Copy this json snippet and insert into a `db.json` file.
 
-```typescripton
+```javascript
 {
     "api":
     [
@@ -87,13 +87,13 @@ These are the steps:
 
 A snippet for the `package.json`:
 
-```typescripton
+```javascript
     "jsonserver": "json-server --watch data/db.json --port 3000 --host 127.0.0.1"
 ```
 
 Add the json server port to `vite.config.js` like this:
 
-```typescript
+```javascript
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 

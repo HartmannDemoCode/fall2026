@@ -35,7 +35,7 @@ In React, **uncontrolled components** refer to components where form data is han
    - Instead of tracking values using React's state (controlled components), the values are read directly from the DOM when the form is submitted.
    - The `handleSubmit` function reads the data using the `FormData` API:
 
-     ```typescript
+     ```javascript
      const form = e.target;
      const formData = new FormData(form);
      ```
@@ -46,7 +46,7 @@ In React, **uncontrolled components** refer to components where form data is han
 
    - The `FormData` object can be directly passed as the body of a `fetch` request, or it can be converted to a plain object with:
 
-     ```typescript
+     ```javascript
      const formJson = Object.fromEntries(formData.entries());
      ```
 

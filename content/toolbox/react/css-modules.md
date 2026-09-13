@@ -78,7 +78,7 @@ src/
 
 ### ⚛️ 3. `App.jsx` — This is the React component
 
-```typescriptx
+```jsx
 import styles from './App.module.css';
 
 export default function App() {
@@ -114,7 +114,7 @@ npm run dev
 
 * You can **combine multiple classes**:
 
-  ```typescriptx
+  ```jsx
   className={`${styles.button} ${styles.danger}`}
   ```
 

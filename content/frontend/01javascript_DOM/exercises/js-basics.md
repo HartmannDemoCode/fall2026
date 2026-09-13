@@ -1,5 +1,5 @@
 ---
-title: TypeScript Basics
+title: JavaScript Basics
 description: Exercises for Frontend Week I
 weight: 1
 draft: false
@@ -9,7 +9,7 @@ draft: false
 
 **Make this exercise in Visual Studio Code and node.js.**
 
-1.1 Declare a TypeScript array and initialize it with some names (Lars, Jan, Peter, Bo, Frederik etc.). Use the filter method to create a new array with only names of length `<=3`.
+1.1 Declare a JavaScript array and initialize it with some names (Lars, Jan, Peter, Bo, Frederik etc.). Use the filter method to create a new array with only names of length `<=3`.
 Use the forEach method to iterate and print (console.log) both the original and the new array.
 
 1.2 Use the names-array created above, and, using its map method, create a new array with all names uppercased.
@@ -33,9 +33,9 @@ The output above was shown with newlines for readability, but this is actually w
 
 In exercise 2, we will use DOM manipulation and place this into a “running” web-page.
 
-1.4  Given this TypeScript array:
+1.4  Given this JavaScript array:
 
-```typescript
+```javascript
 let cars = [
   { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
   { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },

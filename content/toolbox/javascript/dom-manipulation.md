@@ -1,29 +1,25 @@
 ---
 title: "DOM manipulation"
-description: "How to manipulate the DOM using TypeScript"
+description: "How to manipulate the DOM using JavaScript"
 weight: 3
 draft: false
 ---
 
-This is a brief overview of common ways to manipulate the DOM with TypeScript, including adding, modifying, and removing elements or attributes.
+This is a brief overview of common ways to manipulate the DOM with JavaScript, including adding, modifying, and removing elements or attributes.
 
 ## 1. **Selecting Elements**
 
    Before manipulating the DOM, you need to select the elements you want to interact with. You can use methods like `getElementById`, `querySelector`, or `querySelectorAll`.
 
-   ```typescript
+   ```javascript
    // Select element by ID
    const title = document.getElementById("title");
 
    // Select first element with class 'content'
-   const content = document.querySelector<HTMLElement>(".content");
+   const content = document.querySelector(".content");
 
    // Select all paragraphs
-   const paragraphs = document.querySelectorAll<HTMLElement>("p");
-
-   if (title) {
-     title.textContent = "Page title";
-   }
+   const paragraphs = document.querySelectorAll("p");
    ```
 
 ## 2. **Changing Content**
@@ -31,134 +27,100 @@ This is a brief overview of common ways to manipulate the DOM with TypeScript, i
 - **Text Content**: Use `textContent` to change the text inside an element.
 - **HTML Content**: Use `innerHTML` to set or get the HTML content of an element.
 
-   ```typescript
-   if (title) {
-     // Changing text content
-     title.textContent = "New Title";
-   }
+   ```javascript
+   // Changing text content
+   title.textContent = "New Title";
 
-   if (content) {
-     // Changing HTML content
-     content.innerHTML = "<p>This is new content.</p>";
-   }
+   // Changing HTML content
+   content.innerHTML = "<p>This is new content.</p>";
    ```
 
 ## 3. **Changing Attributes**
 
    Use `setAttribute`, `getAttribute`, or directly access the attribute to modify them.
 
-   ```typescript
-   if (title) {
-     // Set an attribute
-     title.setAttribute("class", "new-class");
+   ```javascript
+   // Set an attribute
+   title.setAttribute("class", "new-class");
 
-     // Modify directly
-     title.id = "updatedTitle";
-   }
+   // Get an attribute
+   console.log(content.getAttribute("id"));
 
-   if (content) {
-     // Get an attribute
-     console.log(content.getAttribute("id"));
-   }
+   // Modify directly
+   title.id = "updatedTitle";
    ```
 
 ## 4. **Changing Styles**
 
 - You can change CSS styles directly by using the `style` property.
 
-   ```typescript
-   if (title) {
-     title.style.color = "blue";
-   }
-
-   if (content) {
-     content.style.fontSize = "20px";
-     content.style.display = "none"; // Hide the element
-   }
+   ```javascript
+   title.style.color = "blue";
+   content.style.fontSize = "20px";
+   content.style.display = "none"; // Hide the element
    ```
 
 ## 5. **Adding, Removing, and Modifying Classes**
 
    Use `classList` to manipulate classes on elements.
 
-   ```typescript
-   if (title) {
-     // Add a class
-     title.classList.add("highlight");
+   ```javascript
+   // Add a class
+   title.classList.add("highlight");
 
-     // Remove a class
-     title.classList.remove("highlight");
-   }
+   // Remove a class
+   title.classList.remove("highlight");
 
-   if (content) {
-     // Toggle a class (adds if not present, removes if present)
-     content.classList.toggle("hidden");
+   // Toggle a class (adds if not present, removes if present)
+   content.classList.toggle("hidden");
 
-     // Check if an element has a class
-     console.log(content.classList.contains("hidden"));
-   }
+   // Check if an element has a class
+   console.log(content.classList.contains("hidden"));
    ```
 
 ## 6. **Creating and Inserting Elements**
 
    You can create new elements using `document.createElement`, set their content, and then add them to the DOM using `appendChild` or `insertBefore`.
 
-   ```typescript
-   if (content) {
-     // Create a new paragraph element
-     const newParagraph = document.createElement("p");
-     newParagraph.textContent = "This is a new paragraph.";
+   ```javascript
+   // Create a new paragraph element
+   const newParagraph = document.createElement("p");
+   newParagraph.textContent = "This is a new paragraph.";
 
-     // Append to a parent element
-     content.appendChild(newParagraph);
+   // Append to a parent element
+   content.appendChild(newParagraph);
 
-     // Insert before an existing element
-     const firstParagraph = document.querySelector("p");
-     if (firstParagraph) {
-       content.insertBefore(newParagraph, firstParagraph);
-     }
-   }
+   // Insert before an existing element
+   const firstParagraph = document.querySelector("p");
+   content.insertBefore(newParagraph, firstParagraph);
    ```
 
 ## 7. **Removing Elements**
 
    To remove an element, select it and use `removeChild` on its parent or simply use `remove`.
 
-   ```typescript
-   const newParagraph = document.querySelector("p:last-of-type");
+   ```javascript
+   // Remove an element by calling remove() on it
+   newParagraph.remove();
 
-   if (newParagraph) {
-     // Remove an element by calling remove() on it
-     newParagraph.remove();
-   }
-
-   if (content) {
-     const firstParagraph = content.querySelector("p");
-     if (firstParagraph && content.contains(firstParagraph)) {
-       // Or use removeChild on the parent
-       content.removeChild(firstParagraph);
-     }
-   }
+   // Or use removeChild on the parent
+   content.removeChild(firstParagraph);
    ```
 
 ## 8. **Event Handling and Manipulation**
 
    You can add event listeners to elements to make them interactive.
 
-   ```typescript
-   if (title) {
-     title.addEventListener("click", () => {
-       alert("Title clicked!");
-     });
-   }
+   ```javascript
+   title.addEventListener("click", () => {
+     alert("Title clicked!");
+   });
 
    // Change content on button click
    const button = document.getElementById("myButton");
-   if (button && content) {
-     button.addEventListener("click", () => {
-       content.textContent = "Content changed on button click!";
-     });
-   }
+   button.addEventListener("click", () => {
+     content.textContent = "Content changed on button click!";
+   });
    ```
 
 ## Example: Putting It All Together
@@ -185,22 +147,20 @@ Here’s an example that ties all these manipulations into one script:
     const content = document.querySelector(".content");
     const button = document.getElementById("myButton");
 
-    if (title && content && button) {
-      // Change text and style
-      title.textContent = "Updated Title";
-      title.style.color = "green";
+    // Change text and style
+    title.textContent = "Updated Title";
+    title.style.color = "green";
 
-      // Add event listener to button
-      button.addEventListener("click", () => {
-        // Create a new element
-        const newParagraph = document.createElement("p");
-        newParagraph.textContent = "This is added content!";
-        content.appendChild(newParagraph);
+    // Add event listener to button
+    button.addEventListener("click", () => {
+      // Create a new element
+      const newParagraph = document.createElement("p");
+      newParagraph.textContent = "This is added content!";
+      content.appendChild(newParagraph);
 
-        // Toggle the title's color on click
-        title.style.color = title.style.color === "green" ? "blue" : "green";
-      });
-    }
+      // Toggle the title's color on click
+      title.style.color = title.style.color === "green" ? "blue" : "green";
+    });
   </script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 ---
 title: "Rest Parameters"
-description: "How the rest parameters works in TypeScript"
+description: "How the rest parameters works in JavaScript"
 weight: 10
 draft: false
 ---
-## Rest Parameters in TypeScript
+## Rest Parameters in JavaScript
 
-The **rest parameter** in TypeScript allows you to collect multiple elements or arguments into an array. It’s represented by three dots (`...`) followed by a parameter name, and it can be useful for handling a variable number of arguments or for collecting “the rest” of the elements in array or object destructuring.
+The **rest parameter** in JavaScript allows you to collect multiple elements or arguments into an array. It’s represented by three dots (`...`) followed by a parameter name, and it can be useful for handling a variable number of arguments or for collecting “the rest” of the elements in array or object destructuring.
 
 ## How the Rest Parameter Works
 
@@ -18,9 +18,9 @@ When used in function parameters, the rest parameter collects all additional arg
 
 ### Example: Collecting Extra Arguments
 
-```typescript
-function sum(...numbers: number[]): number {
-  return numbers.reduce((total: number, num: number) => total + num, 0);
+```javascript
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
 }
 
 console.log(sum(1, 2, 3));       // Output: 6
@@ -36,8 +36,8 @@ In this example:
 
 You can combine regular parameters with the rest parameter, but the rest parameter must always be the **last parameter**.
 
-```typescript
-function introduce(firstName: string, lastName: string, ...titles: string[]): void {
+```javascript
+function introduce(firstName, lastName, ...titles) {
   console.log(`Name: ${firstName} ${lastName}`);
   console.log(`Titles: ${titles.join(", ")}`);
 }
@@ -59,8 +59,8 @@ In array destructuring, the rest parameter can collect the remaining elements in
 
 ### Example: Destructuring with Rest in Arrays
 
-```typescript
-const colors: string[] = ["red", "green", "blue", "yellow"];
+```javascript
+const colors = ["red", "green", "blue", "yellow"];
 
 const [first, second, ...remainingColors] = colors;
 
@@ -80,7 +80,7 @@ With object destructuring, the rest parameter can collect any remaining properti
 
 ### Example: Destructuring with Rest in Objects
 
-```typescript
+```javascript
 const person = { name: "Alice", age: 25, city: "New York", profession: "Engineer" };
 
 const { name, age, ...details } = person;

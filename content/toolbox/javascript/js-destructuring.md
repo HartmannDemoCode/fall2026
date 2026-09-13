@@ -1,11 +1,11 @@
 ---
 title: "Destructuring"
-description: "How destructuring works in TypeScript"
+description: "How destructuring works in JavaScript"
 weight: 8
 draft: false
 ---
 
-In TypeScript, **destructuring** is a convenient way to extract values from arrays and properties from objects into distinct variables. This syntax allows for cleaner, more readable code, especially when working with complex data structures.
+In JavaScript, **destructuring** is a convenient way to extract values from arrays and properties from objects into distinct variables. This syntax allows for cleaner, more readable code, especially when working with complex data structures.
 
 ## Array Destructuring
 
@@ -13,8 +13,8 @@ Array destructuring lets you unpack values from an array into separate variables
 
 ### Basic Example
 
-```typescript
-const colors: string[] = ["red", "green", "blue"];
+```javascript
+const colors = ["red", "green", "blue"];
 
 // Destructure the array into individual variables
 const [firstColor, secondColor, thirdColor] = colors;
@@ -30,8 +30,8 @@ In this example, `firstColor`, `secondColor`, and `thirdColor` take the values a
 
 You can skip elements in the array by leaving empty slots.
 
-```typescript
-const numbers: number[] = [1, 2, 3, 4, 5];
+```javascript
+const numbers = [1, 2, 3, 4, 5];
 
 // Only take the first and third elements
 const [first, , third] = numbers;
@@ -44,8 +44,8 @@ console.log(third);  // Output: 3
 
 You can use the **rest operator** (`...`) to gather the remaining elements into a new array.
 
-```typescript
-const numbers: number[] = [1, 2, 3, 4, 5];
+```javascript
+const numbers = [1, 2, 3, 4, 5];
 
 // Destructure the first two elements and gather the rest
 const [first, second, ...rest] = numbers;
@@ -59,8 +59,8 @@ console.log(rest);   // Output: [3, 4, 5]
 
 You can assign default values in case the array doesn’t contain enough elements.
 
-```typescript
-const numbers: number[] = [10];
+```javascript
+const numbers = [10];
 
 // Destructure with default values
 const [a = 1, b = 2, c = 3] = numbers;
@@ -76,7 +76,7 @@ Object destructuring allows you to extract properties from an object and assign 
 
 ### Basic Example
 
-```typescript
+```javascript
 const person = {
   name: "Alice",
   age: 25,
@@ -97,7 +97,7 @@ In this example, `name`, `age`, and `city` are assigned the values of the corres
 
 You can rename variables during destructuring by using a colon (`:`).
 
-```typescript
+```javascript
 const person = {
   name: "Alice",
   age: 25,
@@ -117,7 +117,7 @@ Here, `personName` and `personAge` are the new variable names, and they take the
 
 You can assign default values to variables if the property doesn’t exist in the object.
 
-```typescript
+```javascript
 const person = {
   name: "Alice",
   age: 25
@@ -134,7 +134,7 @@ console.log(city); // Output: "Unknown"
 
 For objects with nested structures, you can destructure deeply.
 
-```typescript
+```javascript
 const user = {
   id: 1,
   info: {
@@ -163,7 +163,7 @@ console.log(zip);  // Output: "10001"
 
 You can use the rest operator to collect remaining properties into a new object.
 
-```typescript
+```javascript
 const person = {
   name: "Alice",
   age: 25,
@@ -183,8 +183,8 @@ console.log(rest); // Output: { age: 25, city: "New York" }
 
 Destructuring can be particularly useful for function parameters, allowing you to pass an object and immediately extract values.
 
-```typescript
-function greet({ name, age }: { name: string; age: number }): void {
+```javascript
+function greet({ name, age }) {
   console.log(`Hello, ${name}! You are ${age} years old.`);
 }
 
@@ -200,7 +200,7 @@ greet(person); // Output: "Hello, Alice! You are 25 years old."
 
 Array destructuring provides a simple way to swap variables without a temporary variable.
 
-```typescript
+```javascript
 let a = 1;
 let b = 2;
 

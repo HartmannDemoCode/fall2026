@@ -1,50 +1,50 @@
 ---
 title: "Booleans"
-description: "How the falsy and truthy values work in TypeScript"
+description: "How the falsy and truthy values work in JavaScript"
 weight: 11
 draft: false
 ---
-## Falsy and Truthy Values in TypeScript
+## Falsy and Truthy Values in JavaScript
 
-Understanding **truthy** and **falsy** values in TypeScript is essential because TypeScript uses implicit type coercion when evaluating expressions in a boolean context. Here’s a deeper dive with examples.
+Understanding **truthy** and **falsy** values in JavaScript is essential because JavaScript uses implicit type coercion when evaluating expressions in a boolean context. Here’s a deeper dive with examples.
 
 ## Falsy Values
 
-Falsy values are values that evaluate to `false` in a boolean context. There are only a few of these in TypeScript, and they are:
+Falsy values are values that evaluate to `false` in a boolean context. There are only a few of these in JavaScript, and they are:
 
 1. **`false`** – The boolean `false`.
 
-   ```typescript
+   ```javascript
    if (false) console.log("This will not run");
    ```
 
 2. **`0`** – The number zero (also `-0`).
 
-   ```typescript
+   ```javascript
    if (0) console.log("This will not run");
    ```
 
 3. **`""`** – An empty string (`''` or `""` or even a template literal ``````).
 
-   ```typescript
+   ```javascript
    if ("") console.log("This will not run");
    ```
 
 4. **`null`** – Represents the intentional absence of any object value.
 
-   ```typescript
+   ```javascript
    if (null) console.log("This will not run");
    ```
 
 5. **`undefined`** – Indicates a variable that has been declared but not assigned a value.
 
-   ```typescript
+   ```javascript
    if (undefined) console.log("This will not run");
    ```
 
 6. **`NaN`** – Not-a-Number, often the result of invalid math operations.
 
-   ```typescript
+   ```javascript
    if (NaN) console.log("This will not run");
    ```
 
@@ -52,7 +52,7 @@ Falsy values are values that evaluate to `false` in a boolean context. There are
 
 Here's a simple example of falsy values in action:
 
-```typescript
+```javascript
 let values = [false, 0, "", null, undefined, NaN];
 
 values.forEach(value => {
@@ -70,28 +70,28 @@ Some common truthy values:
 
 1. **Non-zero numbers** (both positive and negative):
 
-   ```typescript
+   ```javascript
    if (1) console.log("This will run");
    if (-1) console.log("This will also run");
    ```
 
 2. **Non-empty strings**:
 
-   ```typescript
+   ```javascript
    if ("Hello") console.log("This will run");
    if ("false") console.log("Even this string will run");
    ```
 
 3. **Objects** (including arrays, functions, and other objects):
 
-   ```typescript
+   ```javascript
    if ({}) console.log("This will run");
    if ([]) console.log("This will also run");
    ```
 
 4. **`true`** – The boolean `true`.
 
-   ```typescript
+   ```javascript
    if (true) console.log("This will run");
    ```
 
@@ -99,7 +99,7 @@ Some common truthy values:
 
 Here's a simple example of truthy values in action:
 
-```typescript
+```javascript
 let values = [1, -1, "Hello", {}, [], true];
 
 values.forEach(value => {
@@ -111,11 +111,11 @@ values.forEach(value => {
 
 ## Usage in Conditions
 
-TypeScript allows us to use these implicit truthy/falsy values in conditions, which is handy for quickly checking if a variable is set or has content.
+JavaScript allows us to use these implicit truthy/falsy values in conditions, which is handy for quickly checking if a variable is set or has content.
 
 ### Example: Checking if a variable has a value
 
-```typescript
+```javascript
 let name = "Alice";
 if (name) {
   console.log("Name is set");  // This will run because "Alice" is truthy.

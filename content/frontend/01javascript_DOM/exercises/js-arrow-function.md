@@ -1,17 +1,17 @@
 ---
-title: TypeScript Arrow Functions
+title: JavaScript Arrow Functions
 description: Exercises for Frontend Week I
 weight: 3
 draft: false
 ---
 
-# Exercise 1: Getting comfortable arrow functions in TypeScript
+# Exercise 1: Getting comfortable arrow functions in JavaScript
 
 **Make this exercise in Visual Studio Code and node.js.**
 
-- [Documentation on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/TypeScript/Reference/Functions/Arrow_functions)
+- [Documentation on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
-It's time to get familiar with arrow functions in TypeScript. Arrow functions are a concise way to write functions in TypeScript. They are especially useful when working with array methods like `map`, `filter`, and `reduce`. So it's similar to *lambda functions* in Java.
+It's time to get familiar with arrow functions in JavaScript. Arrow functions are a concise way to write functions in JavaScript. They are especially useful when working with array methods like `map`, `filter`, and `reduce`. So it's similar to *lambda functions* in Java.
 
 ## 1.1 Basic Arrow Function Syntax
 
@@ -19,7 +19,7 @@ It's time to get familiar with arrow functions in TypeScript. Arrow functions ar
 
 Rewrite the following function as an arrow function:
 
-```typescript
+```javascript
 const greet = (): string => {
   // Write your code here
   return '';
@@ -40,7 +40,7 @@ Hello, World!
 
 Convert this function into an arrow function:
 
-```typescript
+```javascript
 const add = (a: number, b: number): number => {
   // Write your code here
   return 0;
@@ -61,7 +61,7 @@ Store the arrow function in a variable called `add` and call it with `add(5, 3)`
 
 Rewrite the following function using an arrow function with an implicit return:
 
-```typescript
+```javascript
 const multiply = (a: number, b: number): number => {
   // Write your code here
   return 0;
@@ -82,7 +82,7 @@ Test it by calling `multiply(4, 2)`.
 
 Write an arrow function called `getRandomNumber` that returns a random number between 0 and 1 (using `Math.random`). Test by calling `getRandomNumber()`.
 
-```typescript
+```javascript
 const getRandomNumber = (): number => {
   // Write your code here
   return 0;
@@ -99,7 +99,7 @@ A random number between 0 and 1 (e.g., `0.456`).
 
 Rewrite the following function as an arrow function with a single parameter and implicit return:
 
-```typescript
+```javascript
 const square = (x: number): number => {
   // Write your code here
   return 0;
@@ -120,7 +120,7 @@ Test by calling `square(5)`.
 
 Use an arrow function to double each number in the array:
 
-```typescript
+```javascript
 const numbers: number[] = [1, 2, 3, 4];
 const doubledNumbers = numbers.map((value: number): number => {
   // Write your code here
@@ -141,7 +141,7 @@ console.log(doubledNumbers);
 
 Given an array of numbers:
 
-```typescript
+```javascript
 const numbers: number[] = [5, 12, 18, 7, 24];
 ```
 
@@ -159,7 +159,7 @@ Use an arrow function with the `filter` method to create a new array containing 
 
 Use an arrow function as a callback in the `setTimeout` function to print `"Hello after 1 second"` after a 1-second delay.
 
-```typescript
+```javascript
 setTimeout(() => {
   console.log('Hello after 1 second');
 }, 1000);
@@ -176,7 +176,7 @@ Hello after 1 second
 **Exercise:**  
 Write an object `person` with properties `name` and `sayHello`. The `sayHello` property should be an arrow function that logs `"Hello, my name is <name>"` where `<name>` is the value of the `name` property.
 
-```typescript
+```javascript
 const person = {
   name: 'Alice',
   sayHello: (): void => {
@@ -203,7 +203,7 @@ Create an arrow function `greet` with two parameters: `name` and `greeting`, whe
 
 Test with:
 
-```typescript
+```javascript
 const greet = (name: string, greeting: string = 'Hello'): string => {
   // Write your code here
   return '';

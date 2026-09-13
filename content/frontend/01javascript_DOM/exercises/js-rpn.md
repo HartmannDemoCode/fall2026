@@ -1,16 +1,16 @@
 ---
-title: TypeScript Reverse Polish Notation
+title: JavaScript Reverse Polish Notation
 description: Exercises for Frontend Week I
 weight: 8
 draft: false
 ---
 
-# Codelab Exercise 3: Implementing Reverse Polish Notation in TypeScript
+# Codelab Exercise 3: Implementing Reverse Polish Notation in JavaScript
 
 ![Codelab](../images/codelab.png)
 {.half-right}
 
-In the [calculator exercise](../js-calculator), we used the TypeScript `eval()` method. It's far from a perfect solution, and in this exercise we will take the first steps to a better way. We will explore **[Reverse Polish Notation (RPN)](https://en.wikipedia.org/wiki/Reverse_Polish_notation)**, a postfix notation that eliminates the need for parentheses and respects operator precedence implicitly. RPN is used in many programming languages and calculators because of its simplicity and efficiency.
+In the [calculator exercise](../js-calculator), we used the JavaScript `eval()` method. It's far from a perfect solution, and in this exercise we will take the first steps to a better way. We will explore **[Reverse Polish Notation (RPN)](https://en.wikipedia.org/wiki/Reverse_Polish_notation)**, a postfix notation that eliminates the need for parentheses and respects operator precedence implicitly. RPN is used in many programming languages and calculators because of its simplicity and efficiency.
 
 The famous HP calculators use RPN. If you have never used one, you should try it. It's a different way of thinking about calculations. This one from 1981 is a beauty, and you can still buy them today.:
 
@@ -24,7 +24,7 @@ Notice that there is not an equal sign on the calculator. You just type in the n
 ## **Objective**
 
 - Understand how Reverse Polish Notation (RPN) works and why it’s useful.
-- Implement a TypeScript algorithm that evaluates expressions in RPN format.
+- Implement a JavaScript algorithm that evaluates expressions in RPN format.
 - Extend you calculator web page to use RPN instead of infix notation.
 
 ---
@@ -48,7 +48,7 @@ Notice that there is not an equal sign on the calculator. You just type in the n
      2. `(6 + 4) * 2`
      3. `7 + 8 * (3 - 1)`
 
-### **Part 2: Building the RPN Evaluator in TypeScript**
+### **Part 2: Building the RPN Evaluator in JavaScript**
 
 1. **Algorithm Explanation**:
    - Use a **stack** to evaluate RPN expressions.
@@ -60,7 +60,7 @@ Notice that there is not an equal sign on the calculator. You just type in the n
 2. **Code Template**:
    - Here’s a template to help get started with the algorithm:
 
-   ```typescript
+   ```javascript
    function evaluateRPN(expression) {
      const tokens = expression.split(" ");
      const stack = [];

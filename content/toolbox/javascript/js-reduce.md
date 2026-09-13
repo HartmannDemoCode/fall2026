@@ -1,16 +1,16 @@
 ---
 title: "Reduce"
-description: "How the reduce function works in TypeScript"
+description: "How the reduce function works in JavaScript"
 weight: 6
 draft: false
 ---
-## Reduce in TypeScript
+## Reduce in JavaScript
 
-The `reduce` function in TypeScript is a powerful tool for processing an array and reducing it to a single value, whether that’s a number, string, object, or even another array. Here’s a breakdown of how it works and why it’s so useful.
+The `reduce` function in JavaScript is a powerful tool for processing an array and reducing it to a single value, whether that’s a number, string, object, or even another array. Here’s a breakdown of how it works and why it’s so useful.
 
 ### Basic Syntax of `reduce`
 
-```typescript
+```javascript
 array.reduce((accumulator, currentValue, index, array) => {
     // logic to accumulate values
 }, initialValue);
@@ -28,7 +28,7 @@ array.reduce((accumulator, currentValue, index, array) => {
 
 Let’s look at a simple example where we sum an array of numbers using `reduce`:
 
-```typescript
+```javascript
 const numbers = [1, 2, 3, 4];
 const sum = numbers.reduce((accumulator, currentValue) => {
   return accumulator + currentValue;
@@ -57,19 +57,19 @@ After the final iteration, `reduce` returns the `accumulator`, which is `10`.
 
 1. **Summing an Array**:
 
-   ```typescript
+   ```javascript
    const sum = numbers.reduce((acc, curr) => acc + curr, 0);
    ```
 
 2. **Finding the Maximum**:
 
-   ```typescript
+   ```javascript
    const max = numbers.reduce((acc, curr) => (curr > acc ? curr : acc), numbers[0]);
    ```
 
 3. **Flattening an Array of Arrays**:
 
-   ```typescript
+   ```javascript
    const arrays = [[1, 2], [3, 4], [5]];
    const flatArray = arrays.reduce((acc, curr) => acc.concat(curr), []);
    // Output: [1, 2, 3, 4, 5]
@@ -77,7 +77,7 @@ After the final iteration, `reduce` returns the `accumulator`, which is `10`.
 
 4. **Counting Occurrences**:
 
-   ```typescript
+   ```javascript
    const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
    const count = fruits.reduce((acc, fruit) => {
      acc[fruit] = (acc[fruit] || 0) + 1;
@@ -88,7 +88,7 @@ After the final iteration, `reduce` returns the `accumulator`, which is `10`.
 
 5. **Transforming to an Object**:
 
-   ```typescript
+   ```javascript
    const pairs = [["name", "Alice"], ["age", 25], ["city", "New York"]];
    const obj = pairs.reduce((acc, [key, value]) => {
      acc[key] = value;

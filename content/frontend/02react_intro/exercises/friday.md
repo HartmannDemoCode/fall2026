@@ -37,7 +37,7 @@ npm install json-server --save-dev
 
 2. **Create a `db.json` file** in a new `data` folder with the following content:
 
-```typescripton
+```javascript
 {
   "students": [
     {
@@ -86,7 +86,7 @@ npm install json-server --save-dev
 
 Add a script to `package.json` to run the JSON server:
 
-```typescripton
+```javascript
 "scripts": {
   "jsonserver": "json-server --watch data/db.json --port 3000"
 }
@@ -152,7 +152,7 @@ Add a script to `package.json` to run the JSON server:
 
 - Create a utils folder and add a fetchData.js file:
 
-```typescriptx
+```jsx
 export function fetchData(url, callback, method, body) {
   const headers = {
     'Accept': 'application/json',

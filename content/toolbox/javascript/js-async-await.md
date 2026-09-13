@@ -1,17 +1,17 @@
 ---
 title: "Async/Await"
-description: "Using Async/Await in TypeScript"
+description: "Using Async/Await in JavaScript"
 weight: 14
 draft: false
 ---
 
-`async` and `await` are keywords in TypeScript that help you work with asynchronous code in a more readable and manageable way. They allow you to write asynchronous code that looks like synchronous code, making it easier to read and understand. Here’s a breakdown of how they work:
+`async` and `await` are keywords in JavaScript that help you work with asynchronous code in a more readable and manageable way. They allow you to write asynchronous code that looks like synchronous code, making it easier to read and understand. Here’s a breakdown of how they work:
 
 ## `async` Function
 
 An `async` function is a function that always returns a `Promise`. By declaring a function as `async`, you are signaling that it contains asynchronous code and may rely on data that is not immediately available.
 
-```typescript
+```javascript
 async function fetchData() {
   return 'Data fetched!';
 }
@@ -30,7 +30,7 @@ The `await` keyword is used inside an `async` function and pauses the execution 
 
 ### Example
 
-```typescript
+```javascript
 async function fetchData() {
   const response = await fetch('https://api.example.com/data');
   const data = await response.json();
@@ -58,7 +58,7 @@ Using `async` and `await` provides several benefits over using `.then()` and `.c
 
 One of the main advantages of `async`/`await` is that you can handle errors in a more intuitive way using `try...catch` blocks.
 
-```typescript
+```javascript
 async function fetchData() {
   try {
     const response = await fetch('https://api.example.com/data');
@@ -84,7 +84,7 @@ In this example:
 
 When you need to perform multiple asynchronous operations that don't depend on each other, you can run them in parallel using `Promise.all()` with `await`.
 
-```typescript
+```javascript
 async function fetchMultipleData() {
   const [data1, data2] = await Promise.all([
     fetch('https://api.example.com/data1').then(res => res.json()),
@@ -103,4 +103,4 @@ fetchMultipleData();
 - **Error Handling**: Use `try...catch` for easier error handling within `async` functions.
 - **Parallel Execution**: Use `Promise.all()` with `await` to run multiple asynchronous operations in parallel.
 
-This approach provides a more readable, manageable, and error-resistant way to handle asynchronous operations in TypeScript.
+This approach provides a more readable, manageable, and error-resistant way to handle asynchronous operations in JavaScript.

@@ -1,5 +1,5 @@
 ---
-title: TypeScript Tic-Tac-Toe
+title: JavaScript Tic-Tac-Toe
 description: Exercises for Frontend Week I
 weight: 9
 draft: false
@@ -22,7 +22,7 @@ You will need to use the following:
 
 - HTML
 - CSS grid or flexbox could be smart
-- TypeScript
+- JavaScript
   - Arrays
   - Functions
   - Variables
@@ -42,6 +42,6 @@ You will need to use the following:
 4. The game should be able to detect a draw
 5. The game should be able to restart
 
-Tic Tac Toe is one of the most used games for teaching programming. And there is a reason for that. It's a simple game, but it can be implemented in many ways. And it's a good exercise for you to practice your programming skills - and learning TypeScript and SPA development at the same time.
+Tic Tac Toe is one of the most used games for teaching programming. And there is a reason for that. It's a simple game, but it can be implemented in many ways. And it's a good exercise for you to practice your programming skills - and learning JavaScript and SPA development at the same time.
 
 Have fun, and don't give up.

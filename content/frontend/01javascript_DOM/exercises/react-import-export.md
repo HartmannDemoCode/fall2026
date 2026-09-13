@@ -7,7 +7,7 @@ draft: false
 
 # React 1: Import/export + spread, and destructuring
 
-This exercise is about structuring your React app into parts and learning more about TypeScript.
+This exercise is about structuring your React app into parts and learning more about JavaScript.
 
 ## 1.1 Create a React project
 
@@ -19,13 +19,13 @@ This exercise is about structuring your React app into parts and learning more a
 
 ## 1.2 Understanding ES6 Modules – import and export
 
-This exercise is about splitting a TypeScript file into several parts, and putting the pieces together in a modular fashion.
+This exercise is about splitting a JavaScript file into several parts, and putting the pieces together in a modular fashion.
 
-Skim through this article on [import and export of modules in TypeScript](https://www.freecodecamp.org/news/javascript-modules/).
+Skim through this article on [import and export of modules in JavaScript](https://www.freecodecamp.org/news/javascript-modules/).
 
-1.2.1 In the src folder, create a new TypeScript file called `file1.js` and paste in the following content:
+1.2.1 In the src folder, create a new JavaScript file called `file1.js` and paste in the following content:
 
-```typescript
+```javascript
 export const text1 = "Hello";
 export const text2 = "Hello World";
 export const text3 = "Hello Wonderful World";
@@ -38,35 +38,35 @@ export default function upper(str){
 Observe how we export "many" named values using the export keyword, and a single value using export default. Usually, it's not recommended to mix default exports with “named” exports. However, for simplicity, we do it here.
 What you export as default (only one value pr. file) must be imported like this:
 
-```typescript
+```javascript
 import upper from "./file1";
 ```
 
 What you export as named (non-default) exports will be exported as one single object (containing the three properties `text1`, `text2`, `text3`) and must be included with the Object Destructuring syntax, see below:
 
-```typescript
+```javascript
 import {text1,text2, text3} from "./file1";
 ```
 
 You can import it all, as sketched below:
 
-```typescript
+```javascript
 import upper, {text1,text2, text3} from "./file1";
 ```
 
 1.2.2 Import the three strings, and the function in `App.js`, and add a h2 element: `<h2>Ex 1</h2>` and four `<p>` tags that will print the imported variables. Remember the default export is a function, so call it with a default value like:
 
-```typescriptx
+```jsx
 <p>{upper("please uppercase me")}</p>
 ```
 
 ## 3 Spread operator: Object and Array Destructuring
 
-1.3.1 Skim this article first for a "[dead Simple intro to Destructuring TypeScript Objects](http://wesbos.com/destructuring-objects/)" and this "[Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/TypeScript/Reference/Operators/Spread_syntax)"
+1.3.1 Skim this article first for a "[dead Simple intro to Destructuring JavaScript Objects](http://wesbos.com/destructuring-objects/)" and this "[Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)"
 
 3.2 Create a new file: `file2.js` to hold only a single object and export it like below:
 
-```typescript
+```javascript
 const obj = {
   firstName: "Kurt",
   lastName: "Wonnegut",
@@ -84,7 +84,7 @@ Add a new `h2` element with headline: Ex2 and a `<p>` element, that prints first
 
 Add these lines to `file2.js`:
 
-```typescript
+```javascript
 export const males = ["Peter","Jan"];
 export const females = ["Janne","Sarah"];
 ```
@@ -93,13 +93,13 @@ And import them in `App.js`
 
 Use array destructuring and the spread syntax to create a few one-liners that will print out (use console.log()) these values (in the given order):
 
-```typescript
+```javascript
 ["Peter", "Jan", "Janne", "Sarah"]
 ```
 
 And this:
 
-```typescript
+```javascript
 ["Peter", "Jan", "Kurt", "Helle", "Janne", "Sarah", "Tina"]
 ```
 

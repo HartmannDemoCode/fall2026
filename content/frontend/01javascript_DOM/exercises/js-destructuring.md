@@ -1,17 +1,17 @@
 ---
-title: TypeScript Destructuring
+title: JavaScript Destructuring
 description: Exercises for Frontend Week I
 weight: 4
 draft: false
 ---
 
-# Exercise 2: Destructuring in TypeScript
+# Exercise 2: Destructuring in JavaScript
 
 **Make this exercise in Visual Studio Code and node.js.**
 
-These exercises practice the destructuring in TypeScript, which will be valuable when you start learning React.
+These exercises practice the destructuring in JavaScript, which will be valuable when you start learning React.
 
-- [Documentation on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/TypeScript/Reference/Operators/Destructuring_assignment)
+- [Documentation on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 ## 2.1 Basic Array Destructuring
 
@@ -19,7 +19,7 @@ These exercises practice the destructuring in TypeScript, which will be valuable
 
 Given the array:
 
-```typescript
+```javascript
 const fruits = ['apple', 'banana', 'cherry'];
 ```
 
@@ -39,7 +39,7 @@ cherry
 
 Given the array:
 
-```typescript
+```javascript
 const colors = ['red', 'green', 'blue', 'yellow'];
 ```
 
@@ -58,7 +58,7 @@ blue
 
 Given an array that might be missing values:
 
-```typescript
+```javascript
 const numbers = [10, 20];
 ```
 
@@ -78,7 +78,7 @@ num3: 30
 
 Given the object:
 
-```typescript
+```javascript
 const person = { name: 'Alice', age: 25, city: 'Wonderland' };
 ```
 
@@ -97,7 +97,7 @@ Wonderland
 **Exercise:**  
 Given the object:
 
-```typescript
+```javascript
 const book = { title: '1984', author: 'George Orwell', year: 1949 };
 ```
 
@@ -116,7 +116,7 @@ publicationYear: 1949
 **Exercise:**  
 Given the object:
 
-```typescript
+```javascript
 const student = {
   name: 'Bob',
   grade: 10,
@@ -143,7 +143,7 @@ A
 
 Define a function `displayPerson` that takes an object as a parameter with properties `name`, `age`, and `city`. Use destructuring in the function’s parameter to access these properties directly. Call the function with:
 
-```typescript
+```javascript
 displayPerson({ name: 'Charlie', age: 30, city: 'Paris' });
 ```
 
@@ -159,7 +159,7 @@ Name: Charlie, Age: 30, City: Paris
 
 Given two variables:
 
-```typescript
+```javascript
 let a = 5;
 let b = 10;
 ```

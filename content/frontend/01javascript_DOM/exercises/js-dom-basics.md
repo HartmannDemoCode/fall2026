@@ -1,11 +1,11 @@
 ---
-title: TypeScript DOM Basics
+title: JavaScript DOM Basics
 description: Exercises for Frontend Week I
 weight: 2
 draft: false
 ---
 
-# Exercise 2: TypeScript, DOM Manipulation and Events
+# Exercise 2: JavaScript, DOM Manipulation and Events
 
 ## 2.1 Simple DOM Manipulation and Event Handling
 
@@ -75,7 +75,7 @@ In [exercise 1](../js-basics), you used an array type and `map` and `join` funct
 
 In [exercise 1](../js-basics), you created a number of filter functions using the array given below:
 
-```typescript
+```javascript
 var cars = [
     { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
     { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },

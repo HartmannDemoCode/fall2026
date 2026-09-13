@@ -1,17 +1,17 @@
 ---
-title: TypeScript Spread Operator
+title: JavaScript Spread Operator
 description: Exercises for Frontend Week I
 weight: 4
 draft: false
 ---
 
-# Exercise 3: The Spread Operator in TypeScript
+# Exercise 3: The Spread Operator in JavaScript
 
 **Make this exercise in Visual Studio Code and node.js.**
 
 These exercises practice the spread operator, which will be valuable when you start learning React.
 
-[Documentation on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/TypeScript/Reference/Operators/Spread_syntax)
+[Documentation on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ### 3.1 Merging Arrays
 
@@ -19,7 +19,7 @@ These exercises practice the spread operator, which will be valuable when you st
 
 Given two arrays:
 
-```typescript
+```javascript
 const array1: number[] = [1, 2, 3];
 const array2: number[] = [4, 5, 6];
 ```
@@ -38,7 +38,7 @@ Use the spread operator to merge `array1` and `array2` into a new array called `
 
 Given the array:
 
-```typescript
+```javascript
 const originalArray: string[] = ['apple', 'banana', 'cherry'];
 ```
 
@@ -57,7 +57,7 @@ copiedArray: ['apple', 'banana', 'cherry', 'date']
 
 Given the array:
 
-```typescript
+```javascript
 const numbers: number[] = [20, 30, 40];
 ```
 
@@ -75,7 +75,7 @@ Use the spread operator to add `10` at the beginning of `numbers`, creating a ne
 
 Given two objects:
 
-```typescript
+```javascript
 const userDetails = { name: 'Alice', age: 25 };
 const contactInfo = { email: 'alice@example.com', phone: '123-456-7890' };
 ```
@@ -94,7 +94,7 @@ Use the spread operator to merge `userDetails` and `contactInfo` into a new obje
 
 Given the object:
 
-```typescript
+```javascript
 const book = { title: '1984', author: 'George Orwell', year: 1949 };
 ```
 
@@ -113,7 +113,7 @@ updatedBook: { title: '1984', author: 'George Orwell', year: 1950 }
 
 Define a function `sum` that takes any number of arguments and returns their sum. Use the spread operator to pass an array of numbers to this function:
 
-```typescript
+```javascript
 function sum(a: number, b: number, c: number): number {
   // Write your code here
   return 0;
@@ -135,7 +135,7 @@ console.log(sum(...numbers));
 
 Given two arrays:
 
-```typescript
+```javascript
 const colors1: string[] = ['red', 'blue'];
 const colors2: string[] = ['green', 'yellow'];
 ```
@@ -154,7 +154,7 @@ Use the spread operator to combine `colors1` and `colors2` into a new array call
 
 Define a function `describePerson` that takes a `name` parameter followed by any number of hobbies (using the rest operator). The function should log the name and a list of hobbies. Call the function as shown:
 
-```typescript
+```javascript
 function describePerson(name: string, ...hobbies: string[]): void {
   // Write your code here
   console.log('');
@@ -175,7 +175,7 @@ Name: Charlie, Hobbies: reading, coding, hiking
 
 Given the array:
 
-```typescript
+```javascript
 const numbers: number[] = [10, 20, 30, 40, 50];
 ```
 

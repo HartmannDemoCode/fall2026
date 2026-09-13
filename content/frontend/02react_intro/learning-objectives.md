@@ -7,7 +7,7 @@ draft: false
 
 # Learning Objectives
 
-## Week2: TypeScript and React continued
+## Week2: JavaScript and React continued
 
 ## React intro
 
@@ -18,7 +18,7 @@ draft: false
 
 2. **JSX Syntax:**
     - Compose UI elements using JSX syntax.
-    - Grasp the relationship between JSX and TypeScript.
+    - Grasp the relationship between JSX and JavaScript.
     - Include CSS in project
 
 3. **State and Props:**

@@ -1,12 +1,12 @@
 ---
 title: "Spread Operator"
-description: "How the spread operator works in TypeScript"
+description: "How the spread operator works in JavaScript"
 weight: 9
 draft: false
 ---
-## Spread Operator in TypeScript
+## Spread Operator in JavaScript
 
-Certainly! The **spread operator** (`...`) in TypeScript is a versatile syntax used to unpack (or "spread") the elements of an array, the properties of an object, or even arguments in function calls. It makes it easy to work with collections and creates clean, readable code, especially for copying, merging, and passing values.
+Certainly! The **spread operator** (`...`) in JavaScript is a versatile syntax used to unpack (or "spread") the elements of an array, the properties of an object, or even arguments in function calls. It makes it easy to work with collections and creates clean, readable code, especially for copying, merging, and passing values.
 
 ## How the Spread Operator Works
 
@@ -22,8 +22,8 @@ The spread operator essentially "spreads" the contents of an array or object int
 
 Using the spread operator, you can create a shallow copy of an array.
 
-```typescript
-const numbers: number[] = [1, 2, 3];
+```javascript
+const numbers = [1, 2, 3];
 const copy = [...numbers];
 
 console.log(copy); // Output: [1, 2, 3]
@@ -35,9 +35,9 @@ This method copies each element of the `numbers` array into a new array, `copy`.
 
 The spread operator makes it easy to combine arrays.
 
-```typescript
-const first: number[] = [1, 2];
-const second: number[] = [3, 4];
+```javascript
+const first = [1, 2];
+const second = [3, 4];
 const combined = [...first, ...second];
 
 console.log(combined); // Output: [1, 2, 3, 4]
@@ -49,8 +49,8 @@ Here, `[...first, ...second]` merges the two arrays by spreading the elements of
 
 You can add elements at any position in an array using the spread operator.
 
-```typescript
-const numbers: number[] = [2, 3];
+```javascript
+const numbers = [2, 3];
 const newArray = [1, ...numbers, 4];
 
 console.log(newArray); // Output: [1, 2, 3, 4]
@@ -66,7 +66,7 @@ The spread operator can also copy and merge objects by spreading their propertie
 
 Using the spread operator, you can create a shallow copy of an object.
 
-```typescript
+```javascript
 const person = { name: "Alice", age: 25 };
 const copy = { ...person };
 
@@ -79,7 +79,7 @@ This approach copies each property of `person` into `copy`. Similar to arrays, t
 
 You can merge objects by spreading their properties into a new object.
 
-```typescript
+```javascript
 const details = { age: 25, city: "New York" };
 const contact = { email: "alice@example.com" };
 const merged = { ...details, ...contact };
@@ -93,7 +93,7 @@ In this example, `...details` and `...contact` spread their properties into `mer
 
 When merging objects, if properties overlap, the latter object’s properties override the previous ones.
 
-```typescript
+```javascript
 const person = { name: "Alice", age: 25 };
 const updatedPerson = { ...person, age: 26 };
 
@@ -108,10 +108,10 @@ When used in function calls, the spread operator allows you to pass an array of 
 
 ### Example: Passing Array Elements as Arguments
 
-```typescript
-const numbers: number[] = [1, 2, 3];
+```javascript
+const numbers = [1, 2, 3];
 
-function sum(a: number, b: number, c: number): number {
+function sum(a, b, c) {
   return a + b + c;
 }
 
@@ -124,8 +124,8 @@ In this example, `...numbers` spreads the array `[1, 2, 3]` so that each element
 
 The spread operator is handy when you want to pass an array to a function that expects multiple arguments, like `Math.max`.
 
-```typescript
-const scores: number[] = [89, 76, 95, 82];
+```javascript
+const scores = [89, 76, 95, 82];
 const highestScore = Math.max(...scores);
 
 console.log(highestScore); // Output: 95
@@ -140,7 +140,7 @@ Here, `Math.max(...scores)` spreads `scores` as individual arguments to `Math.ma
 3. **Adding Elements to Arrays**: Add new elements at the beginning, middle, or end of an array.
 4. **Converting NodeLists to Arrays**: Convert `NodeList` or `arguments` objects to arrays for array methods.
 
-   ```typescript
+   ```javascript
    const listItems = document.querySelectorAll("li");
    const itemsArray = [...listItems]; // Now `itemsArray` is an array
    ```
@@ -159,4 +159,4 @@ Here, `Math.max(...scores)` spreads `scores` as individual arguments to `Math.ma
 - **Objects**: Use it to copy objects, merge them, and override specific properties.
 - **Functions**: Use it to spread array elements as individual arguments when calling a function.
 
-The spread operator is a powerful and concise tool in TypeScript, helping you manage collections of data with cleaner and more readable syntax.
+The spread operator is a powerful and concise tool in JavaScript, helping you manage collections of data with cleaner and more readable syntax.

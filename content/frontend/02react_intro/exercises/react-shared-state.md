@@ -33,7 +33,7 @@ Use [Vite](/toolbox/react/vite) to create, and then remove irrelevant code from 
 
 ### 3. Add this App Component
 
-```typescriptx
+```jsx
 import React, { useState } from 'react';
 import AddTodo from './AddTodo';
 import TodoList from './TodoList';
@@ -61,7 +61,7 @@ export default App;
 
 ### 4. Add this AddTodo Component
 
-```typescriptx
+```jsx
 import React, { useState } from 'react';
 
 const AddTodo = ({ onAddTodo }) => {
@@ -93,7 +93,7 @@ export default AddTodo;
 
 ### 5. Add this TodoList Component
 
-```typescriptx
+```jsx
 import React from 'react';
 
 const TodoList = ({ todos }) => {
