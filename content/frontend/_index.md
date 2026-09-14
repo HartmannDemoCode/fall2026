@@ -9,3 +9,6 @@ This is where the magic happens! The frontend is the face of your application, w
 You will learn to work with the core technologies of HTML, CSS, and JavaScript + React to build dynamic and responsive interfaces.
 
 ![Frontend Technologies](/images/frontend/frontend-logos.jpeg)
+
+## Course Structure
+![Frontend Course Structure](images/schedule.png)

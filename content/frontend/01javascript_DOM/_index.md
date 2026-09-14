@@ -53,6 +53,7 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 0. [Exercise 0: Getting started with JavaScript and the DOM](exercises/js-dom-intro)
 1. [Exercise 1: Getting comfortable with arrays, filter, map, and forEach](exercises/js-basics)
 2. [Exercise 2: JavaScript, DOM Manipulation and Events](exercises/js-dom-basics)
+3. [Exercise 3: Javascript Calculator](exercises/js-calculator)
 
 **Part III: Bonus exercises (JavaScript training)**
 

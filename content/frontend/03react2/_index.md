@@ -1,6 +1,6 @@
 ---
-title: 03 React State and Effects
-description: "React components with state and effects for building a SPA with many components. Also a quick introduction to a mock API server with json-server."
+title: 03 React Controlled components and Forms
+description: "React controlled components and forms for building a SPA with many components."
 weight: 3
 draft: false
 geekdocCollapseSection: true

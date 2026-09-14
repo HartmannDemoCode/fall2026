@@ -7,7 +7,9 @@ draft: false
 
 # Learning Objectives
 
-## Week3: TS and React continued
+## Week2: TypeScript and React continued
+
+### Day I
 
 1. **useState**
 
