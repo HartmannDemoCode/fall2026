@@ -16,6 +16,7 @@ Topics covered in this week are:
 2. Simple form input
 3. Controlled Forms/Components
 4. Sharing state between components
+5. Fetching data from a mock API server
 
 ### Prepare for the class
 
@@ -27,7 +28,11 @@ Orient yourself in this documentation:
 4. [React docs - Lifting State](https://react.dev/learn/sharing-state-between-components) or [toolbox lifting state](/toolbox/react/lifting-state)
 5. [React Forms: Controlled Components](/toolbox/react/controlled-component)
 6. [React Forms: Uncontrolled Components](/toolbox/react/uncontrolled-component)
+7. [Json server](toolbox/json-server)
+8. [Fetch (GET) in JavaScript](/toolbox/javascript/js-fetch)
+9. [Async/Await in JavaScript](/toolbox/javascript/js-async-await)
 
-### In-class exersises
+### exersises
 
 - [React Forms](exercises/react-forms)
+- [Trip app with controlled components](exercises/tripapp)

@@ -1,20 +1,40 @@
 ---
 title: React Forms
-description: Exercises for Frontend Week III about controlled components and forms
+description: Exercises for Frontend Week II about controlled components and forms
 weight: 6
 draft: false
 ---
 
-# React Forms and controlled components
+# React  CRUD & Form
 
+This is a guided tutorial in which we will:
+
+1. Fetch person data from an api ([JSON Server](https://www.npmjs.com/package/json-server))
+
+2. Show a list of persons
+
+3. Implement simple `CRUD` operations on the persons. This includes `GET`, `POST`, `PUT`, and `DELETE` http requests by using TypeScripts' `fetch` method.
+
+4. Do a little styling with css
+
+We aim for something like this mockup:
+
+![Form](../images/form-app.png)
+
+These are the steps:
 
 ### 1. Getting the project configured
 
 - Create a React project with [Vite](/toolbox/react/vite)
 - Cleaning up stuff
 
-### 2. the data we will use
+### 2. Using JSON server
 
+- Configuring the JSON server. Copy this json snippet and insert into a `db.json` file.
+
+```typescripton
+{
+    "api":
     [
       {
         "id": 1,
@@ -52,6 +72,74 @@ draft: false
         "gender": "male"
       }
     ]
+  }
+```
+
+A snippet for the `package.json`:
+
+```typescripton
+    "jsonserver": "json-server --watch data/db.json --port 3000 --host 127.0.0.1"
+```
+
+Add the json server port to `vite.config.js` like this:
+
+```typescript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    proxy: {
+      '/api': 'http://127.0.0.1:3000'
+    }
+  }
+})
+
+```
+
+Also, install the VS Code extention `REST Client` af Huachao Mao. This makes it possible to create a `dev.http` file to test out the api as we do it in IntelliJ.
+
+This is a suggestion for a `dev.http` file for testing:
+
+```plaintext
+GET http://localhost:3000/api
+
+###
+
+GET http://localhost:3000/api/2
+
+###
+
+POST http://localhost:3000/api
+Content-Type: application/json
+Accept: application/application/json
+
+{
+    "age": "22",
+    "name": "Steve",
+    "email": "steve@test.com",
+    "gender": "male"
+  }
+
+###
+
+PUT http://localhost:3000/api/2
+Content-Type: application/json
+Accept: application/json
+
+{
+    "age": "22",
+    "name": "Steve",
+    "email": "steve@gmail.com",
+    "gender": "male"
+}
+
+### 
+
+DELETE http://localhost:3000/api/6
+Accept: application/json
 ```
 
 ### 3. Creating components
@@ -111,10 +199,43 @@ draft: false
 
 ### 4. Setting up states
 
-### 5. Using the person data
+### 5. Fetching persons from the JSON-server
 
-Create a new folder `data` and a file `persistence.js`:
-and add the json data to the file and export it as a function `getPersons()` that returns the data.
+Create a new folder `util` and a file `persistence.js`:
+
+```react
+export function fetchData(url, callback, method, body) {
+
+    const headers =
+        {
+            'Accept': 'application/json'
+        }
+
+    if (method === 'POST' || method === 'PUT') {
+        headers['Content-Type'] = 'application/json'
+    }
+
+    const options = {
+        method,
+        headers
+    }
+
+    if (body) {
+        options.body = JSON.stringify(body);
+    }
+
+    fetch(url, options)
+        .then(res => res.json())
+        .then(data => callback(data))
+        .catch(err => {
+            if (err.status) {
+                err.fullError.then(e => console.log(e.detail))
+            } else {
+                console.log("Network error");
+            }
+        })
+}
+```
 
 ### 6. Showing the persons
 
