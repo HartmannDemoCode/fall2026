@@ -1,50 +1,20 @@
 ---
 title: React Forms
-description: Exercises for Frontend Week II about controlled components and forms
+description: Exercises for Frontend Week III about controlled components and forms
 weight: 6
 draft: false
 ---
 
-# React  CRUD & Form
+# React Forms and controlled components
 
-This is a guided tutorial in which we will:
-
-1. Fetch person data from an api ([JSON Server](https://www.npmjs.com/package/json-server))
-
-2. Show a list of persons
-
-3. Implement simple `CRUD` operations on the persons. This includes `GET`, `POST`, `PUT`, and `DELETE` http requests by using TypeScripts' `fetch` method.
-
-4. Do a little styling with css
-
-We aim for something like this mockup:
-
-![Form](../images/form-app.png)
-
-## The video series
-
-Code happily along with the [video tutorials](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=2ee87351-82f5-4bc9-addc-b0b9013e1dc7) - and use the snippets from this file when needed. In this way we can speed up the work a bit. The videos are called: `forms_01` to `forms_05`.
-
-1. [Get started (16:23)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2f69f405-a1b8-4e0d-a9e5-b0c20110e8e3)
-2. [Create components (8:05)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f81fe7a9-099a-4366-aa84-b0c20111517b)
-3. [Get all persons (16:28)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0ed05562-8fbc-4ee2-bdfa-b0c2011394ed)
-4. [Delete (20:28)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=38c297ea-1511-424d-b770-b0c300dee4a7)
-5. [Create and update (49:36)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6f937e84-afc9-4819-819b-b0c3010e3226)
-
-These are the steps:
 
 ### 1. Getting the project configured
 
 - Create a React project with [Vite](/toolbox/react/vite)
 - Cleaning up stuff
 
-### 2. Using JSON server
+### 2. the data we will use
 
-- Configuring the JSON server. Copy this json snippet and insert into a `db.json` file.
-
-```typescripton
-{
-    "api":
     [
       {
         "id": 1,
@@ -82,74 +52,6 @@ These are the steps:
         "gender": "male"
       }
     ]
-  }
-```
-
-A snippet for the `package.json`:
-
-```typescripton
-    "jsonserver": "json-server --watch data/db.json --port 3000 --host 127.0.0.1"
-```
-
-Add the json server port to `vite.config.js` like this:
-
-```typescript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: {
-      '/api': 'http://127.0.0.1:3000'
-    }
-  }
-})
-
-```
-
-Also, install the VS Code extention `REST Client` af Huachao Mao. This makes it possible to create a `dev.http` file to test out the api as we do it in IntelliJ.
-
-This is a suggestion for a `dev.http` file for testing:
-
-```plaintext
-GET http://localhost:3000/api
-
-###
-
-GET http://localhost:3000/api/2
-
-###
-
-POST http://localhost:3000/api
-Content-Type: application/json
-Accept: application/application/json
-
-{
-    "age": "22",
-    "name": "Steve",
-    "email": "steve@test.com",
-    "gender": "male"
-  }
-
-###
-
-PUT http://localhost:3000/api/2
-Content-Type: application/json
-Accept: application/json
-
-{
-    "age": "22",
-    "name": "Steve",
-    "email": "steve@gmail.com",
-    "gender": "male"
-}
-
-### 
-
-DELETE http://localhost:3000/api/6
-Accept: application/json
 ```
 
 ### 3. Creating components
@@ -209,43 +111,10 @@ Accept: application/json
 
 ### 4. Setting up states
 
-### 5. Fetching persons from the JSON-server
+### 5. Using the person data
 
-Create a new folder `util` and a file `persistence.js`:
-
-```react
-export function fetchData(url, callback, method, body) {
-
-    const headers =
-        {
-            'Accept': 'application/json'
-        }
-
-    if (method === 'POST' || method === 'PUT') {
-        headers['Content-Type'] = 'application/json'
-    }
-
-    const options = {
-        method,
-        headers
-    }
-
-    if (body) {
-        options.body = JSON.stringify(body);
-    }
-
-    fetch(url, options)
-        .then(res => res.json())
-        .then(data => callback(data))
-        .catch(err => {
-            if (err.status) {
-                err.fullError.then(e => console.log(e.detail))
-            } else {
-                console.log("Network error");
-            }
-        })
-}
-```
+Create a new folder `data` and a file `persistence.js`:
+and add the json data to the file and export it as a function `getPersons()` that returns the data.
 
 ### 6. Showing the persons
 

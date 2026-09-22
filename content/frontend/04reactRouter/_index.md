@@ -46,9 +46,7 @@ Orient yourself in this documentation:
 
 ### In-class exersises
 
-1. [UseState](exercises/react-state)
-2. [Lists and keys](exercises/react-lists)
-3. [Todolist](exercises/react-shared-state)
+1. [Implementing state and interactivity: Clone the start repo](https://github.com/HartmannDemoCode/frontendw2.git)
 
 #### Look in the toolbox for inspiration and reference:
 

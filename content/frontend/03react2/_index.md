@@ -30,5 +30,4 @@ Orient yourself in this documentation:
 
 ### In-class exersises
 
-- [Implementing state and interactivity: Clone the start repo](https://github.com/HartmannDemoCode/frontendw2.git)
 - [React Forms](exercises/react-forms)
