@@ -1,19 +1,12 @@
 ---
-title: React CodeLab  
-description: React CodeLab Exercise  
+title: React Trip app   
+description: React Trip app Exercise  
 weight: 5
 draft: false
 ---
 
 # React CodeLab Exercise: Fetching and Displaying Trip Data  
-<span style="color: red;">HUSK Valgfagspræsentation i eftermiddag: 12-12:45 i vores lokale</span>
 
-![Codelab](../images/codelab.png)
-{.half-right}
-
-This CodeLab exercise is designed to help you practice creating React applications using Vite, fetching data from REST APIs, state management, conditional rendering, and creating dynamic UIs with interactive components. Collaboration and teamwork are emphasized, so consider pair programming where possible.
-
-![codelab_school_exercise](/images/common/pair-programming.gif)  
 
 ## Exercise Overview  
 

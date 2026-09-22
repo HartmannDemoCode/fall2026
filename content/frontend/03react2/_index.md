@@ -1,5 +1,5 @@
 ---
-title: 03 React Controlled components and Forms
+title: 03 React Controlled components
 description: "React controlled components and forms for building a SPA with many components."
 weight: 3
 draft: false
