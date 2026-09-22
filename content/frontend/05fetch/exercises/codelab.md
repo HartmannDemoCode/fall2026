@@ -1,12 +1,11 @@
 ---
-title: React CodeLab  
-description: React CodeLab Exercise  
+title: React trip app 
+description: React trip app exercise for building a SPA with many components.
 weight: 5
 draft: false
 ---
 
 # React CodeLab Exercise: Fetching and Displaying Trip Data  
-<span style="color: red;">HUSK Valgfagspræsentation i eftermiddag: 12-12:45 i vores lokale</span>
 
 ![Codelab](../images/codelab.png)
 {.half-right}
@@ -112,4 +111,4 @@ This CodeLab exercise is designed to help you practice creating React applicatio
 
 ---
 
-Good luck and have fun! Remember to read instructions carefully, collaborate with your teammates, and ask for help if needed.
+Good luck and have fun! Remember to read instructions carefully and ask for help if needed.
