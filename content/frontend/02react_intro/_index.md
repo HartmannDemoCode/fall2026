@@ -17,11 +17,8 @@ Topics covered in this week are:
 2. Import and Export
 3. Props
 4. UseState
-5. UseEffect
-6. Lists and Keys
-7. Conditional Rendering
-8. Simple form input
-9. Sharing state between components
+5. Lists and Keys
+6. Sharing state between components
 
 
 ### Prepare for the class
