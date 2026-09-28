@@ -28,7 +28,7 @@ Orient yourself in this documentation:
 4. [React docs - Lifting State](https://react.dev/learn/sharing-state-between-components) or [toolbox lifting state](/toolbox/react/lifting-state)
 5. [React Forms: Controlled Components](/toolbox/react/controlled-component)
 6. [React Forms: Uncontrolled Components](/toolbox/react/uncontrolled-component)
-7. [Json server](toolbox/json-server)
+7. [Json server](/toolbox/react/json-server)
 8. [Fetch (GET) in JavaScript](/toolbox/javascript/js-fetch)
 9. [Async/Await in JavaScript](/toolbox/javascript/js-async-await)
 
