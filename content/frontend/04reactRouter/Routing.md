@@ -2,7 +2,7 @@
 title: Routing examples
 description: "Examples of routing with React Router"
 weight: 5
-draft: true
+draft: false
 ---
 
 # Frontend routing with React Router 6

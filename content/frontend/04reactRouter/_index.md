@@ -21,7 +21,7 @@ Topics covered in this week are:
 
 - Orient yourself in this documentation:
 
-0. [Routing](Routing)
+0. [Routing](./Routing)
 1. [React Router Documentation - The Declarative Mode](https://reactrouter.com/start/declarative/installation)
 2. [React routing examples](https://reactrouter.com/start/declarative/routing)
 3. [Navigation](https://reactrouter.com/start/declarative/navigating)
