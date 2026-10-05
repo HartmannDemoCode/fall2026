@@ -30,7 +30,6 @@ Topics covered in this week are:
 ### In-class activity
 1. [Go through the examples](https://github.com/HartmannDemoCode/react_router_demo_2025) corresponding to the documentation above together in class.
 2. [Routing in React](exercises/routing-in-react) - This is a more advanced exercise, so you can work in pairs or small groups. You can also use the examples from the class as a reference.
-3. [React Router book exercise](exercises/routing-in-react)
 
 ### 2 weeks mini project
 1. [React Router mini project](/projects/react_mini_project/miniproject)

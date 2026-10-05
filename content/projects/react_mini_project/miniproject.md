@@ -307,18 +307,6 @@ Implement `NotFoundPage` with a link back to `/books`.
 - [ ] Browser Back and Forward work as expected.
 - [ ] Inputs have labels, validation feedback is visible, and the layout works on mobile and desktop.
 
-## Submission and reflection
-
-Submit a Git repository with setup instructions and a short README explaining:
-
-1. Why is the book collection stored in App rather than separately in each page?
-2. What is the difference between nested route definitions and nested UI layouts?
-3. What do the two outlets render when the URL is `/books/b1/edit`?
-4. Why does BooksLayout forward its outlet context?
-5. When do you use props, and when do you use `useOutletContext`?
-6. Why does `/books/create` display the creation page rather than details for an ID named `create`?
-7. What is the difference between an unknown URL and a missing book?
-8. Why does persistence need an effect, while finding a book does not?
 
 ## Optional extensions
 
