@@ -34,6 +34,8 @@ const config = {
   USERPROTECTED: "auth/userprotected",
   ADMINPROTECTED: "auth/adminprotected"
 };
+````
+
 3. Implement the following functions in the apiFacade.js file:
    - `setToken(token)`: Store the JWT token in local storage.
    - `getToken()`: Retrieve the JWT token from local storage.
