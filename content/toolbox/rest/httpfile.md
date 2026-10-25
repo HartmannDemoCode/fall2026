@@ -34,7 +34,7 @@ A protected books endpoint may return `401` here because no token was supplied.
 ## 3. Understand the request structure
 
 ```http
-POST http://localhost:7070/api/auth/login
+POST https://security.hartmanndemo.dk/api/auth/login
 Content-Type: application/json
 Accept: application/json
 
