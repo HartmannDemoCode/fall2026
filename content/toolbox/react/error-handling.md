@@ -9,9 +9,9 @@ There are many types of errors that can occur in a React application.
 These errors can be caused by a variety of factors, such as bugs in the code, network issues,
 or problems with the rendering process.
 
-- In this [React error demo](https://github.com/dat3Cph/errorhandling-in-react)
+- In this [React error demo](https://github.com/HartmannDemoCode/errorHandlingDemo)
 
-we will demonstrate different types of errors that can occur in a React application
+I demonstrate different types of errors that can occur in a React application
 and how to handle them.
 
 ## 4 main types of errors
@@ -27,3 +27,5 @@ and how to handle them.
 Try to clone and run the demo to see how the different types of errors are handled in a React application.
 
 There will also be more information on how to handle these errors in the Readme file of the demo.
+
+
