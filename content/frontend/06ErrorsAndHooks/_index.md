@@ -50,7 +50,7 @@ Important: if you are unsure what to do, use this rule:
 
 2. Find the weak spots in your JWT app
    - Open your JWT app from last week.
-   - Search for all `fetch` calls, `axios` calls, or custom API helper functions.
+   - Search for all `fetch` calls and custom API helper functions.
    - Write down every request in the app, for example:
      - login
      - fetch user data
@@ -60,6 +60,8 @@ Important: if you are unsure what to do, use this rule:
      - delete item
    - For every request, ask: "What should happen if the server returns 400, 401, 403, 404, or 500?" and "What if the network is down?"
    - Make a list of every failed state you want to handle.
+     - E.g. login fails, get user data fails, etc.
+     - For each failed state, write down what the user should see in the UI. This is your error handling plan.
 
 3. Add a standard loading/error pattern to your components
    - For every component that loads data, add these states:
@@ -108,7 +110,7 @@ return <div>{data.map(item => <p key={item.id}>{item.name}</p>)}</div>;
 
    - This is the pattern you should repeat for all data-fetching components.
 
-4. Implement HTTP status handling in the same way as the demo
+4. Implement HTTP status handling in the same way as the demo.
    - In your fetch logic, always check `response.ok`.
    - If the response is not ok, do not just do `console.log()`. Instead, convert the status code into a message the user understands.
    - Use a small mapping like this:
@@ -135,7 +137,14 @@ if (!response.ok) {
 
    - For network failures, catch the error and show a message such as:
      - "Could not connect to the server. Check your internet connection."
-
+     - These happens when the fetch promise rejects, for example if the user is offline.
+     ```jsx
+    try {
+      const response = await fetch("/api/example");
+    } catch (err) {
+      setError("Could not connect to the server. Check your internet connection.");
+    }
+    ```
 5. Add user-friendly error handling to the login form
    - Open the login form and make it handle the following states:
      - empty username or password
@@ -145,6 +154,7 @@ if (!response.ok) {
      - loading state
    - Start with a simple state setup:
 
+
 ```jsx
 const [username, setUsername] = useState("");
 const [password, setPassword] = useState("");
@@ -152,7 +162,7 @@ const [error, setError] = useState("");
 const [loading, setLoading] = useState(false);
 ```
 
-   - Then implement the submit handler step by step:
+- Then implement the submit handler step by step:
 
 ```jsx
 const handleLogin = async (e) => {
@@ -194,41 +204,7 @@ const handleLogin = async (e) => {
      - show text like "Logging in..." while waiting
 
 6. Make the app resilient when one component fails
-   - Create an `ErrorBoundary` component.
-   - This is used to catch rendering errors that occur in a part of the UI.
-   - A simple pattern is:
-
-```jsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error("Caught error:", error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div>
-          <h2>Something went wrong.</h2>
-          <p>Please reload the page and try again.</p>
-          <button onClick={() => window.location.reload()}>Reload</button>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-```
-
+   - import the "react-error-boundary" library and wrap your components in an `ErrorBoundary`.
    - Wrap the main content or the parts of the app that are most likely to fail.
    - Test it by deliberately creating a component that throws an error, then confirm that the boundary shows the fallback UI instead of crashing the whole app.
 
@@ -265,55 +241,7 @@ useEffect(() => {
    - Show a banner or alert at the top of the page when this happens.
    - This makes the app user-friendly even when something unexpected occurs.
 
-8. Refactor authentication into a custom hook
-   - Create a custom hook called `useAuth`.
-   - The hook should be responsible for authentication logic, not the component itself.
-   - Move the login, logout, and token logic into this hook.
-   - Example structure:
-
-```jsx
-function useAuth() {
-  const [user, setUser] = useState(null);
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  const login = async (username, password) => {
-    setLoading(true);
-    setError("");
-
-    try {
-      const response = await fetch("/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password })
-      });
-
-      if (!response.ok) {
-        throw new Error("Invalid credentials");
-      }
-
-      const data = await response.json();
-      localStorage.setItem("token", data.token);
-      setUser({ username });
-    } catch (err) {
-      setError(err.message || "Login failed");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const logout = () => {
-    localStorage.removeItem("token");
-    setUser(null);
-  };
-
-  return { user, error, loading, login, logout };
-}
-```
-
-   - This is a good pattern because your component becomes cleaner and easier to read.
-
-9. Add a header that changes depending on login state
+8. Add a header that changes depending on login state
    - Create or update a header component.
    - If the user is logged in, show something like:
      - "Logged in as Alice"
@@ -337,7 +265,7 @@ function useAuth() {
 
    - Make sure the header updates immediately after successful login or logout.
 
-10. Check your work against this final checklist
+9. Check your work against this final checklist
    - Login form shows a friendly message when credentials are wrong.
    - Missing input is validated before sending the request.
    - Loading text disables the button during requests.
@@ -348,11 +276,6 @@ function useAuth() {
    - Header updates with the correct user state.
    - The app feels stable even when something fails.
 
-11. Optional extension: add token refresh
-   - If the token expires, try to refresh it before showing a login screen.
-   - Add a `useEffect` that runs when the app starts and checks whether there is a valid token.
-   - While checking, show a loading message.
-   - This is a more advanced challenge for students who finish early.
 
 #### Look in the toolbox for inspiration and reference:
 
