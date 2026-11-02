@@ -20,9 +20,9 @@ and how to handle them.
 
 2. **Network errors**: These are errors that occur when the application is trying to communicate with a server. These errors are usually caused by a problem with the network connection. Often you will handle these errors with a `try...catch` statement.
 
-3. **React render errors**: These are errors that occur when the React application is rendering. These errors are usually caused by a problem with the React code. Missing props, undefined variables, etc.
+3. **React render errors**: These are errors that occur when the React application is rendering. These errors are usually caused by a problem with the React code. Missing props, undefined variables, etc. The ErrorBoundary component is a good way to handle these types of errors.
 
-4. **Routing errors**: These are errors that occur when the application is trying to navigate to a different page. These errors are usually caused by a problem with the routing configuration. Missing routes, incorrect paths, etc.
+4. **Routing errors**: These are errors that occur when the application is trying to navigate to a different page. These errors are usually caused by a problem with the routing configuration. Missing routes, incorrect paths, etc. These errors can be handled with the ErrorBoundary component as well.
 
 Try to clone and run the demo to see how the different types of errors are handled in a React application.
 
