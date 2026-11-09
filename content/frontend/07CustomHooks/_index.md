@@ -24,6 +24,6 @@ Topics covered in this week are:
 
 ### In-class exercises
 
-- [Simple toggle hook](exercises/simple-toggle-hook)
+- [Simple toggle hook](exercises/togglehook)
 - [Theme context toggle (dark/light)](exercises/theme-context-toggle)
 - [useAuth in an existing project (beginner guide)](exercises/useauth-existing-project)
