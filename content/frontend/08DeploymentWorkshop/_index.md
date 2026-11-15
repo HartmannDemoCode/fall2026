@@ -6,10 +6,13 @@ draft: false
 geekdocCollapseSection: true
 ---
 
+## Prepare for the class
+- Follow steps 0-4 in [Toolbox: Deployment Infrastructure](../toolbox/deployment-infrastructure/_index.md) to set up your droplet and SSH access.
+
 # Videos
-[1. Buy your domain, start a new droplet and point name servers to Digital Ocean](https://youtu.be/eNdRjnl-HjM)
-[2. SSH into your droplet, create folder and files]()
-[3. Build project locally, copy to droplet and run with Caddy]()
+1. [Buy your domain, start a new droplet and point name servers to Digital Ocean 10:00](https://youtu.be/eNdRjnl-HjM) 
+2. [SSH into your droplet, create folder and files 15:00](https://youtu.be/NWJb2gxR-hs)
+3. [Build project locally, copy to droplet and run with Caddy 10:00](https://youtu.be/IQh8_m_vroM)
 
 ## Code snippets
 ### Docker compose with Caddy
