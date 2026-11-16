@@ -53,6 +53,15 @@ yourdomain.dk {
 }
 ```
 
+### Building and deploying your React project
+1. Build your React project locally using `npm run build`. This will create a `dist` folder in your project directory.
+2. Copy the contents of the `dist` folder to the `site/deployfolder` directory on your droplet using `scp`.
+```bash
+scp -r dist/* root@yourdropletip:/path/to/site/deployfolder
+````
+3. Start the Caddy container using `docker-compose up -d`. This will start the Caddy web server and serve your React project.
+4. Stop the Caddy container using `docker-compose down` if you need to make changes or stop the server.
+
 ## Linux commands
 - `ls -la` - list all files in current directory with details
 - `cd <directory>` - change directory to `<directory>`
